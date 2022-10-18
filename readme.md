@@ -15,15 +15,10 @@ Integrantes:
 
     - Sanchez Rizzi Roberta:
 
-Integrantes:
-    - Mosquera Irene: 
-        -38 años
-        -Licenciada en Administración de Empresas
-        -Cursando Full Stack en Digital House
-        
-    - Santarcangelo Leandro:
-        -43 años
-        -Ingeniero Industrial
+Objetivo:
+    
+    - Ofrecer artículos de equitación a jinetes y amazonas, simplificando las compras con
+      muy pocos clicks y brindando la mejor experiencia mediante envios rápidos a un precio conveniente.	
 
 
 Sitios Web que tomamos como referencia:
