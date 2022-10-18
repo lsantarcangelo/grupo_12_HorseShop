@@ -1,4 +1,19 @@
-Tematica del sitio: E-commerce de productos para equitación
+Tematica del sitio: E-commerce
+
+Descripcion de la oferta de productos: articulos para equitacion
+
+Integrantes:
+    
+    - Mosquera Irene: 
+        -38 años
+        -Licenciada en Administración de Empresas
+        -Cursando Full Stack en Digital House
+        
+    - Santarcangelo Leandro:
+        -43 años
+        -Ingeniero Industrial
+
+    - Sanchez Rizzi Roberta:
 
 Sitios Web que tomamos como referencia:
     - https://www.robinsonsequestrian.com/
