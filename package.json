@@ -1,0 +1,23 @@
+{
+  "name": "grupo_12_HorseShop",
+  "version": "1.0.0",
+  "description": "Tematica del sitio: E-commerce",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsantarcangelo/grupo_12_HorseShop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsantarcangelo/grupo_12_HorseShop/issues"
+  },
+  "homepage": "https://github.com/lsantarcangelo/grupo_12_HorseShop#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
