@@ -62,5 +62,29 @@
     padding: 2%;
     width: 60%;
     border: 1px solid black;
+}
 
+/* Media Query para Tablet */
+@media (min-width: 768px) {
+    .logo {
+        width: 20%;
+        margin: auto;
+    }    
+    .nav-bar {
+        display: block;
+        padding: 10px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+    }
+    ul li {
+        list-style-type: none;
+        font-size: 1rem;
+    }
+    ul li a {
+        text-decoration: none;
+        color: #000;
+    }
 }
