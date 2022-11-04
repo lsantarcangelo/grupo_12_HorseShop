@@ -6,13 +6,17 @@
 
 .top-header {
     padding-top: 5px;
-    background-color: #eae8e5;
+/*     background-color: #eae8e5; */
+    background-color: white;
     display: flex;
     flex-wrap: nowrap;
+    border-bottom: 5px solid #25363d;
 }
 
 .top-header input {
     width: 100%;
+    font-size: 0.5rem;
+
 }
 
 .form {
@@ -60,8 +64,13 @@
 .categorias article {
     margin-bottom: 2%;
     padding: 2%;
-    width: 60%;
-    border: 1px solid black;
+    width: 55%;
+/*     border: 1px solid black; */
+}
+
+.categorias article img {
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* Media Query para Tablet */
@@ -73,6 +82,7 @@
     .nav-bar {
         display: block;
         padding: 10px;
+        background-color: #25363d;
     }
     ul {
         display: flex;
@@ -82,9 +92,10 @@
     ul li {
         list-style-type: none;
         font-size: 1rem;
+
     }
     ul li a {
         text-decoration: none;
-        color: #000;
+        color: #f2f0ea;
     }
 }
