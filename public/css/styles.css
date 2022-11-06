@@ -16,12 +16,17 @@
 .top-header input {
     width: 100%;
     font-size: 0.5rem;
+}
 
+.burger-menu {
+    align-self: center;
+    padding: 0 10px;
+    width: 10%;
 }
 
 .form {
     padding-left: 5px;
-    width: 30%;
+    width: 20%;
     display: flex;
     align-items: center;
 }
@@ -40,14 +45,18 @@
     width: 30%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
+
 
 .account p {
     display: none;
 }
 
 .account i {
-    padding: 5px;
+    padding: 0 6px;
+    font-size: 0.8rem;
 }
 
 .nav-bar {
@@ -75,10 +84,52 @@
 
 /* Media Query para Tablet */
 @media (min-width: 768px) {
+    .top-header {
+        border-bottom: none;
+    }
+
+    .top-header input {
+        font-size: 0.8rem;
+    }
+
+    .form {
+        width: 30%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    .account {
+        margin: 0 auto;
+    }
+
+    .account-item {
+        width: 25%;
+        margin: 0 auto;
+    }
+
+    .account i {
+        padding: 0 10px;
+        font-size: 1rem;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .account p {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
     .logo {
         width: 20%;
         margin: auto;
-    }    
+    }
+
+    .burger-menu {
+        display: none;
+    }   
     .nav-bar {
         display: block;
         padding: 10px;
@@ -88,6 +139,7 @@
         display: flex;
         justify-content: space-evenly;
         text-decoration: none;
+ 
     }
     ul li {
         list-style-type: none;
