@@ -60,6 +60,15 @@
     display: none;
 }
 
+.novedades {
+    width: 100%;
+}
+
+.novedades img {
+    width: 100%;
+    margin: 0px auto;
+}
+
 .categorias {
     padding-top: 8%;
     display: flex;
