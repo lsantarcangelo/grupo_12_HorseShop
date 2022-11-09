@@ -30,12 +30,12 @@
     align-items: center;
 }
 
-.logo {
+.logo-header {
     width: 30%;
     margin: auto;
 }
 
-.logo img {
+.logo-header img {
     width: 100%;
     margin: auto;
 }
@@ -129,7 +129,7 @@
         text-align: center;
     }
 
-    .logo {
+    .logo-header {
         width: 20%;
         margin: auto;
     }
