@@ -15,6 +15,10 @@ Integrantes:
 
     - Sanchez Rizzi Roberta:
 
+    - Alegre Sergio Nicolás
+        -40 años
+        - Instructor de Yoga
+
 Objetivo:
     
     - Ofrecer artículos de equitación a jinetes y amazonas, simplificando las compras con
