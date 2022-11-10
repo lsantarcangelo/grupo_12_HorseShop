@@ -70,7 +70,7 @@
 }
 
 .categorias {
-    padding-top: 8%;
+    padding-top: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,12 +81,23 @@
     margin-bottom: 2%;
     padding: 2%;
     width: 45%;
-/*     border: 1px solid black; */
 }
 
 .categorias article img {
     width: 100%;
     margin: 0 auto;
+}
+
+/* #hombre {
+    position: relative;
+} */
+
+article h4 {
+/*     position: absolute;
+    bottom: -2px; */
+    width: inherit;
+    margin: 0px auto;
+    text-align: center;
 }
 
 /* Media Query para Tablet */
