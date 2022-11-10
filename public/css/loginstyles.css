@@ -1,0 +1,415 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.top-header {
+    padding-top: 5px;
+    background-color: #f2f0ea;
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 5px solid #25363d;
+}
+
+.top-header input {
+    width: 100%;
+    font-size: 0.5rem;
+}
+
+.burger-menu {
+    align-self: center;
+    padding: 0 10px;
+    width: 10%;
+}
+
+.form {
+    padding-left: 5px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 30%;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    margin: auto;
+}
+
+.account {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account p {
+    display: none;
+}
+
+.account i {
+    padding: 0 6px;
+    font-size: 0.8rem;
+}
+
+.nav-bar {
+    display: none;
+}
+
+.categorias {
+    padding-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.categorias article {
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 45%;
+/*     border: 1px solid black; */
+}
+
+.categorias article img {
+    width: 100%;
+    margin: 0 auto;
+}
+/* Login*/
+
+.log-in form{
+    border:#25363d 1px solid;
+    border-radius: 5%;
+    margin: 5px 5px;
+    padding-bottom: 15px;  
+}
+
+.log-in form h2{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.crear-cuenta h2{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.login p{
+    font-size: 14px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.log-in form input[type="text"]{
+    font-size: 12px;
+    height: 30px;
+    width: 60%;
+    padding-left: 5px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    font-style: italic;
+    align-content: center;
+}
+
+input[type="password"]{
+    font-size: 12px;
+    height: 30px;
+    width: 60%;
+    padding-left: 5px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    font-style: italic;
+    align-content: center;
+}
+
+.login-but{
+display: flex;
+justify-content: center;
+}
+
+.log-in form input[type="submit"]{
+ color: #eae8e5;
+ font-weight: 500;
+ background-color: #25363d;  
+ display: flex;
+ align-items: center;
+ width: 40%;
+justify-content: space-around;
+}
+
+.log-in form input[type="submit"]:hover{
+    background-color: #64747c;
+}
+
+.crear-cuenta{
+    border:#25363d 1px solid;
+    border-radius: 5%;
+    margin: 15px 5px;
+    padding-bottom: 15px;
+}
+
+.crear-cuenta h3{
+    font-size: 14px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+    .beneficios{
+    font-size: 12px; 
+    margin-left: 5px;
+    list-style: none;
+}
+  
+.cc-btn{
+background-color: #25363d;
+border: #25363d solid 1px;
+font-size: 16px;
+color: #eae8e5;
+text-decoration: none;
+align-items: center;
+padding: 2px 83px;
+margin-top: 30px;
+margin-left: 8px;
+position: relative;
+top: 14px;
+}
+
+  
+
+
+/* Media Query para Tablet */
+@media (min-width: 768px) {
+    
+   /*LOGIN TABLET*/
+   
+   .log-in form{
+    border:#25363d 1px solid;
+    border-radius: 0%;
+    margin: 15px;
+    padding-bottom: 15px; 
+    position: relative;
+}
+
+
+
+.log-in form h2{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.crear-cuenta h2{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.login p{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 8px;
+}
+
+.nombre-usuario input[type="text"]{
+    font-size: 12px;
+    height: 30px;
+    width: 70%;
+    padding-left: 5px;
+    margin-left: 10px;
+    margin-bottom: 14px;
+    font-style: italic;
+    position: relative;
+    left: 120px;
+}
+
+input[type="password"]{
+        font-size: 12px;
+        height: 30px;
+        width: 60%;
+        padding-left: 5px;
+        margin-left: 10px;
+        margin-bottom: 14px;
+        font-style: italic;
+        position: relative;
+        left: 170px;
+}
+
+.login-but{
+display: flex;
+justify-content: center;
+}
+
+form input[type="submit"]{
+ color: #eae8e5;
+ font-weight: 500;
+ background-color: #25363d;  
+ display: flex;
+ align-items: center;
+ width: 60%;
+justify-content: space-around;
+}
+
+.crear-cuenta{
+    border:#25363d 1px solid;
+    margin: 15px;
+    padding-bottom: 15px; 
+    position: relative;
+    border-radius: 0%;
+
+}
+.crear-cuenta h3{
+    font-size: 16px;
+    margin-left: 8px;
+    margin-bottom: 25px;
+    }    
+   
+
+    .beneficios{
+    font-size: 12px; 
+    margin-left: 5px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+}
+   
+    .cc-btn{
+        background-color: #25363d;
+        border: #25363d solid 1px;
+        font-size: 16px;
+        color: #eae8e5;
+        text-decoration: none;
+        align-items: center;
+        padding: 2px 50px;
+        margin-top: 40px;
+        position: relative;
+        top: 10px
+        }
+           
+}
+
+/* Media Query para Desktop */
+@media (min-width: 1024px) {
+
+ 
+    /* LOGIN DESKTOP*/
+
+    form h2{
+        font-size: 28px;
+        text-align: center;
+        margin-top: 18px;
+        margin-bottom: 26px;
+        font-weight: 500;
+    }
+
+    .crear-cuenta h2{
+        font-size: 28px;
+        text-align: center;
+        margin-top: 18px;
+        margin-bottom: 26px;
+        font-weight: 500;
+    }
+    
+    .login p{
+        font-size: 18px;
+        text-align: center;
+        margin-left: 8px;
+    }
+
+    form .nombre-usuario input[type="text"]{
+        font-size: 16px;
+        height: 40px;
+        width: 60%;
+        padding-left: 5px;
+        margin-left: 10px;
+        margin-bottom: 14px;
+        font-style: italic;
+        position: relative;
+        left: 200px;
+    }
+    
+    .log-in form input[type="password"]{
+        font-size: 16px;
+        height: 40px;
+        width: 60%;
+        padding-left: 5px;
+        margin-left: 10px;
+        margin-bottom: 14px;
+        font-style: italic;
+        position: relative;
+        left: 200px;
+    }
+    
+    .login-but{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    }
+    
+    form input[type="submit"]{
+     color: #eae8e5;    
+     font-weight: 500;
+     background-color: #25363d;  
+     display: flex;
+     align-items: center;
+     width: 30%;
+    justify-content: space-around;
+    height: 40px;
+    position: relative;
+    right: 20px;
+    }
+    
+    .crear-cuenta{
+        border:#25363d 1px solid;
+        margin: 15px;
+        padding-bottom: 15px; 
+        position: relative;;
+    
+    }
+    .crear-cuenta h3{
+        font-size: 18px;
+        text-align: center;
+        margin-left: 8px;
+        }    
+       
+        .beneficios{
+        font-size: 16px; 
+        margin-left: 5px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+       
+        .cliccrear{
+            margin-bottom: 20px;
+        }
+
+        .cc-btn{
+            background-color: #25363d;
+            border: #25363d solid 1px;
+            font-size: 16px;
+            color: #eae8e5;
+            text-decoration: none;
+            padding: 2px 50px;
+            position: relative;
+            top: 20px
+            }
+
+    }
+    
