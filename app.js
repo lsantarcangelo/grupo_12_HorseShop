@@ -11,5 +11,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/index.html'))
 });
 
+app.get('/shoping-cart', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/shoping-cart.html'))
+})
+
 //Recursos estaticos
 app.use(express.static('public'));
