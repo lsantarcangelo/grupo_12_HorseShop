@@ -14,6 +14,9 @@ Integrantes:
         -Ingeniero Industrial
 
     - Sanchez Rizzi Roberta:
+        - 25 años
+        - Trabajando en Mercado Libre
+        - Data Analytics
 
     - Alegre Sergio Nicolás
         -40 años
