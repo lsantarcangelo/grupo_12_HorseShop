@@ -1,3 +1,4 @@
+
 footer { 
     width: 100%;
     padding: 0px 0px;
@@ -20,16 +21,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: 0px;
+    
+    
 }
 
-.logo-footer {
-    width: 85%;
-    margin: 0px auto;
-}
-
-.box_footer .logo-footer img{
+.box_footer .logo img{
     width: 100%;
     margin: 0px auto;
+
+    
 }
 
 .box_footer h2{
@@ -97,16 +97,15 @@ footer {
         flex-direction: column;
         justify-content: center;
         padding: 10px;
+        
+        
     }
     
-    .logo-footer {
-        width: 75%;
-        margin: 0px auto;
-    }
-
-    .box_footer .logo-footer img{
+    .box_footer .logo img{
         width: 100%;
         margin: 0px auto;
+    
+        
     }
     
     .box_footer h2{
@@ -166,31 +165,32 @@ footer {
         justify-content:space-between;
         width: 100%;
         margin: auto;
+        padding: 0px 50px;
+        
     }
     
     .box_footer {
-        width: 50%;
+        width: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 0px;
+        
+        
     }
     
-    .logo-footer {
-        width: 65%;
-        margin: 0px auto;
-    }
-
-    .box_footer .logo-footer img{
+    .box_footer .logo img{
         width: 100%;
-        margin: 0px auto;
+        margin: 10px auto;
+    
+        
     }
     
     .box_footer h2{
         margin-bottom: 20px;
         margin-top: 20px;
         font-weight: 700 ;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #343434;
         text-align: center;
     }
@@ -200,7 +200,7 @@ footer {
         margin-bottom: 15px;
         font-weight: 100;
         color: #7a7a7a;
-        font-size: 1.0rem;
+        font-size: 0.8rem;
         text-align: center;
     }
     
