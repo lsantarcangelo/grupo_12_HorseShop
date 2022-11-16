@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('./partials/head')  %> 
+
+<body>
+<!-- Inicio de Cabecera del Sitio -->
+<%- include('./partials/header') %>
+
+<!-- Inicio del Main del Sitio -->
+    <main>
+        <!-- Seccion de tipo carrousel con Novedades --> 
+        <section class="novedades">
+            <img src="\images\novedades.PNG" alt="Imagen del carrousel de novedades">
+        </section>
+        <!-- Seccion tipo tarjetas con Categorias de Productos -->
+        <section class="categorias">
+            <article id="hombre">
+                <img src="\images\man.PNG" alt="Imagen represetativa de la categoria Hombre">
+                <h4>Hombre</h4>
+            </article>
+
+            <article id="mujer">
+                <img src="\images\woman.PNG" alt="Imagen represetativa de la categoria Mujer">
+                <h4>Mujer</h4>
+            </article>
+
+            <article id="ninos">
+                <img src="\images\kids.PNG" alt="Imagen represetativa de la categoria Ninos">
+                <h4>Ninos</h4>
+            </article>
+
+            <article id="accesorios">
+                <img src="\images\accesories.PNG" alt="Imagen represetativa de la categoria Accesorios">
+                <h4>Accesorios</h4>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer del Sitio -->
+    <%- include('./partials/footer') %> 
+
+</body>
+</html>
