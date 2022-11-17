@@ -22,8 +22,8 @@ app.get('/register', (req, res) => {
     res.render(path.join(__dirname, '/views/register'))
 });
 
-app.get('/shopping-cart', (req, res)=>{
-    res.render(path.join(__dirname, '/views/shoping-cart'))
+app.get('/productCart', (req, res)=>{
+    res.render(path.join(__dirname, '/views/productCart'))
 });
 
 app.get('/detalle', (req, res)=>{
