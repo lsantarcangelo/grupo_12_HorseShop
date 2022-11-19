@@ -26,8 +26,8 @@ app.get('/productCart', (req, res)=>{
     res.render(path.join(__dirname, '/views/productCart'))
 });
 
-app.get('/detalle', (req, res)=>{
-    res.render(path.join(__dirname, '/views/product-detail'))
+app.get('/productDetail', (req, res)=>{
+    res.render(path.join(__dirname, '/views/productDetail'))
 });
 
 //Recursos estaticos
