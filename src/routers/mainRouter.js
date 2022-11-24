@@ -23,5 +23,9 @@ router.get('/productCart', (req, res)=>{
 router.get('/producDetail', (req, res)=>{
     res.render('productDetail')
 });
+router.get('/administrador', (req, res)=>{
+    res.render('administrador')
+    });
+
 
 module.exports = router
