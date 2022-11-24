@@ -20,7 +20,7 @@ router.get('/productCart', (req, res)=>{
     res.render('productCart')
 });
 
-router.get('/producDetail', (req, res)=>{
+router.get('/productDetail', (req, res)=>{
     res.render('productDetail')
 });
 router.get('/administrador', (req, res)=>{

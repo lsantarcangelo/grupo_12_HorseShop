@@ -1,0 +1,40 @@
+.novedades {
+    width: 100%;
+}
+
+.novedades img {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.categorias {
+    padding-top: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.categorias article {
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 45%;
+}
+
+.categorias article img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+article h4 {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+/* Media Query para Desktop */
+@media (min-width: 1024px) {
+    .categorias article {
+        width: 25%;
+    }
+}
