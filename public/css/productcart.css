@@ -1,3 +1,11 @@
+.base{
+    padding: 12%;
+    border: 20px sólido #f0ecec;
+    display:flex;
+    ;
+}
+
+
 a {
     color: #25363d;
 }
@@ -11,15 +19,17 @@ h2 {
 
 .card {
     width: 195px;
-    height: 254px;
+    height: 284px;
     background: #ebe4d4;
     border-radius: 0.4em;
     -webkit-box-shadow: 0.3em 0.3em 0.7em #00000015;
-            box-shadow: 0.3em 0.3em 0.7em #00000015;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
     -webkit-transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: rgb(250, 250, 250) 0.2em solid;
-    
+    border: rgb(250, 250, 250) 0.2em solid; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .card:hover {

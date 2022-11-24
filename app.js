@@ -1,34 +1,25 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = 3000
+const mainRouters =require('./src/routers/mainRouter');
 
-//Motor de vistas
-app.set('view engine', 'ejs'); 
-
-//Levantando servidor
-app.listen(PORT, () => console.log('Servidor corriendo en el puerto' + PORT));
-
-//Rutas
-app.get('/', (req, res) => {
-    res.render(path.join(__dirname, '/views/index'))
-});
-
-app.get('/login', (req, res) => {
-    res.render(path.join(__dirname, '/views/login'))
-});
-
-app.get('/register', (req, res) => {
-    res.render(path.join(__dirname, '/views/register'))
-});
-
-app.get('/productCart', (req, res)=>{
-    res.render(path.join(__dirname, '/views/productCart'))
-});
-
-app.get('/productDetail', (req, res)=>{
-    res.render(path.join(__dirname, '/views/productDetail'))
-});
+const PORT = process.env.PORT || 3000
 
 //Recursos estaticos
 app.use(express.static('public'));
+
+//Motor de vistas
+app.set('View', path.resolve('./views/index.ejs'))
+app.set('view engine', 'ejs'); 
+
+//Levantando servidor
+app.listen(PORT, () => {
+    console.log('http://localhost:' + PORT)
+});
+
+
+//Rutas
+// router.get('/', mainRouters)
+app.use('/',mainRouters)
+
+
