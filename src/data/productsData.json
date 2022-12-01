@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "sodales sed tincidunt eu felis fusce",
+    "description": "fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius",
+    "image": "prenda2.png",
+    "category": "Accesorios",
+    "color": "Orange",
+    "size": "XS",
+    "price": 3080.74
+  },
+  {
+    "id": 2,
+    "name": "imperdiet nullam orci pede venenatis non sodales sed tincidunt",
+    "description": "mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus",
+    "image": "prenda4.png",
+    "category": "Hombre",
+    "color": "Aquamarine",
+    "size": "M",
+    "price": 9172.77
+  },
+  {
+    "id": 3,
+    "name": "nulla sed",
+    "description": "turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst",
+    "image": "prenda5.png",
+    "category": "Mujer",
+    "color": "Indigo",
+    "size": "L",
+    "price": 7594.28
+  },
+  {
+    "id": 4,
+    "name": "convallis morbi",
+    "description": "varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac",
+    "image": "prenda6.png",
+    "category": "Mujer",
+    "color": "Violet",
+    "size": "M",
+    "price": 7131.36
+  },
+  {
+    "id": 5,
+    "name": "dis parturient montes nascetur ridiculus mus",
+    "description": "faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra",
+    "image": "prenda3.png",
+    "category": "Hombre",
+    "color": "Indigo",
+    "size": "XL",
+    "price": 2864.9
+  },
+  {
+    "id": 6,
+    "name": "luctus et",
+    "description": "consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac",
+    "image": "prenda3.png",
+    "category": "Hombre",
+    "color": "Teal",
+    "size": "M",
+    "price": 5905.51
+  },
+  {
+    "id": 7,
+    "name": "pulvinar sed nisl",
+    "description": "accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus",
+    "image": "prenda3.png",
+    "category": "Mujer",
+    "color": "Indigo",
+    "size": "XL",
+    "price": 4182.83
+  },
+  {
+    "id": 8,
+    "name": "erat fermentum justo nec condimentum neque sapien",
+    "description": "faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in",
+    "image": "prenda3.png",
+    "category": "Hombre",
+    "color": "Purple",
+    "size": "XL",
+    "price": 5867.44
+  },
+  {
+    "id": 9,
+    "name": "non ligula pellentesque ultrices phasellus id sapien",
+    "description": "et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in",
+    "image": "prenda3.png",
+    "category": "Mujer",
+    "color": "Goldenrod",
+    "size": "S",
+    "price": 654.87
+  },
+  {
+    "id": 10,
+    "name": "pede malesuada in imperdiet et commodo vulputate",
+    "description": "turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus",
+    "image": "prenda2.png",
+    "category": "Hombre",
+    "color": "Mauv",
+    "size": "XS",
+    "price": 4376.72
+  },
+  {
+    "id": 11,
+    "name": "ultrices libero non mattis pulvinar nulla pede ullamcorper augue a",
+    "description": "elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla",
+    "image": "prenda2.png",
+    "category": "Mujer",
+    "color": "Yellow",
+    "size": "M",
+    "price": 5283.33
+  },
+  {
+    "id": 12,
+    "name": "vivamus tortor duis mattis egestas",
+    "description": "est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim",
+    "image": "prenda2.png",
+    "category": "Accesorios",
+    "color": "Green",
+    "size": "L",
+    "price": 6355.04
+  },
+  {
+    "id": 13,
+    "name": "purus aliquet",
+    "description": "convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a",
+    "image": "prenda5.png",
+    "category": "Mujer",
+    "color": "Green",
+    "size": "S",
+    "price": 8073.52
+  },
+  {
+    "id": 14,
+    "name": "porttitor lorem id ligula suspendisse ornare consequat",
+    "description": "natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo",
+    "image": "prenda2.png",
+    "category": "Hombre",
+    "color": "Indigo",
+    "size": "S",
+    "price": 8742.79
+  },
+  {
+    "id": 15,
+    "name": "sapien",
+    "description": "magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis",
+    "image": "prenda6.png",
+    "category": "Mujer",
+    "color": "Pink",
+    "size": "XL",
+    "price": 7237.92
+  },
+  {
+    "id": 16,
+    "name": "zapatillas",
+    "description": "zapas de equitacion",
+    "image": "default.png",
+    "category": "hombre",
+    "color": "azul",
+    "size": "M",
+    "price": "1200"
+  },
+  {
+    "id": 17,
+    "name": "zapatillas2",
+    "description": "zapas nike",
+    "image": "default.png",
+    "category": "mujer",
+    "color": "blanco",
+    "size": "S",
+    "price": "1200"
+  },
+  {
+    "id": 18,
+    "name": "remera",
+    "description": "remera polo",
+    "image": "default.png",
+    "category": "mujer",
+    "color": "blanco",
+    "size": "S",
+    "price": "1200"
+  }
+]

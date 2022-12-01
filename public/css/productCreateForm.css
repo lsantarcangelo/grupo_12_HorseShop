@@ -1,0 +1,212 @@
+    /*REGISTER*/
+    .registro form {
+        display: flex;
+        flex-direction: column;
+        border: #25363d solid 1px;
+        border-radius: 5%;
+        margin: 12px
+    }
+    
+    .registro form h2{
+        font-size: 22px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .registro form h3{
+        font-size: 14px;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        text-align: center;   
+    }
+    .registro form p{
+        margin-bottom: 0px;
+        margin-left: 5px;
+        font-size: 10px;
+    }
+    
+    .registro form input[type="text"]{
+        font-size: 10px;
+        font-style: italic;
+        margin-bottom: 8px;
+        vertical-align: baseline;
+        width: 85%;
+        position: relative;
+        left: 20px;
+        box-sizing: border-box;
+        
+    }
+    
+    
+    .register-but{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    }
+    
+    .registro form input[type="submit"]{
+     color: #eae8e5;
+     font-weight: 500;
+     background-color: #25363d;  
+    }
+    
+    
+    .registro form input[type="reset"]{
+        color: #eae8e5;
+        font-weight: 500;
+        background-color: #25363d;  
+       }
+       
+       .registro form input[type="submit"]:hover{
+           background-color: #64747c;
+       }
+    
+    /* Media Query para Tablet */
+    
+    @media (min-width: 768px) {
+        
+        /*REGISTER TABLET*/
+    
+        .registro form{
+            border: #25363d 1px solid;
+            margin: 20px;
+            padding: 10px;
+        }
+    
+        .registro form h2{
+            font-size: 24px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        
+        .registro form h3{
+            font-size: 18px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            margin-left: 10px;
+            text-align: left;   
+        }
+    
+        .registro form p{
+            margin-bottom: 0px;
+            margin-left: 10px;
+            margin-right: 12px;
+            font-size: 14px;
+            
+        }
+    
+        
+        
+          .registro form input[type="text"]{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            font-size: 10px;
+            font-style: italic;
+            height: 24px;
+            margin-bottom: 15px;
+       }
+    
+       
+        
+     }
+    
+     .register-but{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 5px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        position: relative;
+        }
+     
+        
+    
+        
+    
+    
+    
+    /* Media Query para Desktop */
+    
+    @media (min-width: 1024px) {
+    
+    /*REGISTER DESKTOP*/
+    
+    .registro form{
+        border: #25363d 1px solid;
+        margin: 40px;
+        padding: 0px;
+    }
+    
+    .registro form h2{
+        font-size: 30px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    
+    .registro form h3{
+        font-size: 22px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: left;   
+        margin-left: 10px;
+    }
+    
+    .registro form p{
+        margin-bottom: 0px;
+        margin-left: px;
+        margin-right: 12px;
+        font-size: 18px;
+        
+    }
+    
+   
+    
+      .registro form input[type="text"]{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        font-style: italic;
+        height: 28px;
+        margin-bottom: 15px;
+        margin-left: 2px;
+        
+      
+    }
+    
+    
+    
+    
+      
+    
+    
+    
+    .register-but{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    position: relative;
+    }
+    
+    .registro form input[type="submit"]{
+        position: relative;
+        right: 30px;
+        bottom: 3px;
+    }
+    
+    .registro form input[type="reset"]{
+        position: relative;
+        left: 30px;
+        bottom: 3px;
+    }
+    
+    }

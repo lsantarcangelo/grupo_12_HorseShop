@@ -6,9 +6,11 @@
     border-bottom: 5px solid #25363d;
 }
 
-.top-header input {
+.form-header input {
     width: 100%;
     font-size: 0.5rem;
+    border-radius: 10px;
+    padding-left: 5px;
 }
 
 .burger-menu {
@@ -61,7 +63,7 @@
         border-bottom: none;
     }
 
-    .top-header input {
+    .form-header input {
         font-size: 0.8rem;
     }
 
@@ -103,23 +105,41 @@
 
     .burger-menu {
         display: none;
-    }   
+    }
+
     .nav-bar {
         display: block;
         padding: 10px;
         background-color: #25363d;
     }
+
+    .nav-bar ul li {
+        list-style-type: none;
+        font-size: 1rem;
+    }
+
+    .nav-bar li ul {
+        display: none;
+        position: absolute;
+        background-color: #25363d;
+
+    }
+
+    .nav-bar li ul a {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .nav-bar li:hover > ul {
+        display: block;
+    }
+
     ul {
         display: flex;
         justify-content: space-evenly;
         text-decoration: none;
- 
     }
-    ul li {
-        list-style-type: none;
-        font-size: 1rem;
 
-    }
     ul li a {
         text-decoration: none;
         color: #f2f0ea;

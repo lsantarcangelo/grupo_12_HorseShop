@@ -1,12 +1,17 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mainRouters =require('./src/routers/mainRouter');
+const mainRouters = require('./src/routers/mainRouter');
+const productsRouter = require('./src/routers/productsRouter');
+
+
 
 const PORT = process.env.PORT || 3000
 
-//Recursos estaticos
+//Middlewares
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
+app.use(express.json());
 
 //Motor de vistas
 app.set('View', path.resolve('./views/index.ejs'))
@@ -20,6 +25,6 @@ app.listen(PORT, () => {
 
 //Rutas
 // router.get('/', mainRouters)
-app.use('/',mainRouters)
+app.use('/',mainRouters);
 
-
+app.use('/products', productsRouter);

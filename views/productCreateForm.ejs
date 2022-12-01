@@ -1,0 +1,55 @@
+<!-- Head -->
+<%- include('./partials/head') %>
+    <link rel="stylesheet" href="css\productCreateForm.css">
+</head>
+
+<body>
+<!-- Inicio de Cabecera del Sitio -->
+<%- include('./partials/header') %>
+        <main>
+            <h1>ACCESO A ADMINISTRADOR</h1>
+            <h3>AGREGAR ARTICULOS</h3>
+            <!-- Formulario  -->
+     <div class="registro">
+        <form action="/products/create" method="POST" class="campo">
+            
+            <p><label>Nombre del producto</label></p>
+            <input type="text" name="name" id="name" size="12px">
+
+            <p><label>Descripcion</label></p>
+            <input type="text" name="description" id="description" size="12px">
+
+            <p><label>Categoria</label></p>
+            <input type="text" name="category" id="category" size="12px">
+
+            <div class="listacolor">
+                <p>COLORES DISPONIBLES</p>
+                <select name="color" id="color" class="seleccionar_color">
+                        <option value="negro">Negro</option>
+                        <option value="azul">Azul</option>
+                        <option value="blanco">Blanco</option>
+                </select>
+            </div>
+
+            <div class= "listatalle">
+                <p>TALLE DISPONIBLES</p>
+                <select name="size" id="size" class="seleccionar_color">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                </select>
+            </div>
+            
+            <div class="register-but">
+            <input type="submit" class= "submit" value="Agregar al listado">
+            <input type="reset" class= "reset" value="Cancelar">
+            </div>
+        </form>
+    </div>
+
+</main>
+<!-- Footer del Sitio -->
+<%- include('./partials/footer') %> 
+    
+</body>
+</html>
