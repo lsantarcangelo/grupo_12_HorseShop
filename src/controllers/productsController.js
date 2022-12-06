@@ -3,14 +3,42 @@ const path = require('path');
 const productsPath = path.join(__dirname, '../data/productsData.json')
 const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
-const productsController = {
-    index: (req, res) => {
-        res.render('./products/productList');
-    },
 
+
+const man = products.filter(function(product){
+	return product.category == 'man'
+})
+
+const woman = products.filter(function(product){
+	return product.category == 'woman'
+})
+
+const kids = products.filter(function(product){
+	return product.category == 'kids'
+})
+
+const accesories = products.filter(function(product){
+	return product.category == 'accesories'
+})
+
+
+
+const productsController = {
+
+    list: (req, res) => {
+		res.render('./products/productList', {man, woman, kids, accesories});
+
+    },
+    
     create: (req, res) => {
         res.render('productCreateForm');
     },
+
+    	// Detalle de un producto//
+	detail: (req, res) => {
+		let product = products.find(element=>element.id == req.params.id)
+		res.render('productList', {product});
+	},
 
     store: (req, res) => {
         let newProduct = {

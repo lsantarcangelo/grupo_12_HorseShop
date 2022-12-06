@@ -23,8 +23,16 @@ router.get('/productCart', (req, res)=>{
 router.get('/productDetail', (req, res)=>{
     res.render('productDetail')
 });
+
+router.get('/productList', (req, res)=>{
+    res.render('productList')
+});
 router.get('/administrador', (req, res)=>{
     res.render('administrador')
+    });
+
+router.get('/mujer', (req, res)=>{
+        res.render('mujer')
     });
 
 
