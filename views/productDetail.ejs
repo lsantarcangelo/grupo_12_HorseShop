@@ -13,15 +13,17 @@
                 
             <div class="detalle_producto">
                 <div class="foto_detalle">
-                    <img src="Images/detalleproductofoto.PNG" alt="" class="fotodetalle">
+                    <img src="/images/<%= product.image %> " alt="" class="fotodetalle">
                 </div>
             
 
                 <div class="texto_detalle">
 
-                    <h1>Modelo producto</h1>
+                    <h1> <%= product.name %> </h1>
 
-                    <h2>$1000</h2>
+                    <h2> <%= product.price %>  </h2>
+
+                    <p> <%= product.description %>  </p>
 
                     <div class="listacolor">
                         <h3>COLOR</h3>

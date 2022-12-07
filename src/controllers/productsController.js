@@ -37,7 +37,7 @@ const productsController = {
     	// Detalle de un producto//
 	detail: (req, res) => {
 		let product = products.find(element=>element.id == req.params.id)
-		res.render('productList', {product});
+		res.render('productDetail', {product});
 	},
 
     store: (req, res) => {
