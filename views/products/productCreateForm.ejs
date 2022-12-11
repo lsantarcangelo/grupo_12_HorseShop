@@ -1,17 +1,20 @@
 <!-- Head -->
-<%- include('./partials/head') %>
-    <link rel="stylesheet" href="css\productCreateForm.css">
+<%- include('../partials/head') %>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/productCreateForm.css">
 </head>
 
 <body>
 <!-- Inicio de Cabecera del Sitio -->
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
         <main>
             <h1>ACCESO A ADMINISTRADOR</h1>
             <h3>AGREGAR ARTICULOS</h3>
             <!-- Formulario  -->
      <div class="registro">
-        <form action="/products/create" method="POST" class="campo">
+        <form action="/products/create" method="POST" enctype="multipart/form-data" class="campo">
             
             <p><label>Nombre del producto</label></p>
             <input type="text" name="name" id="name" size="12px">
@@ -23,7 +26,7 @@
             <input type="text" name="category" id="category" size="12px">
 
             <div class="listacolor">
-                <p>COLORES DISPONIBLES</p>
+                <p>Color</p>
                 <select name="color" id="color" class="seleccionar_color">
                         <option value="negro">Negro</option>
                         <option value="azul">Azul</option>
@@ -32,7 +35,7 @@
             </div>
 
             <div class= "listatalle">
-                <p>TALLE DISPONIBLES</p>
+                <p>Talle</p>
                 <select name="size" id="size" class="seleccionar_color">
                         <option value="S">S</option>
                         <option value="M">M</option>
@@ -40,6 +43,11 @@
                 </select>
             </div>
             
+            <div class="img-create-form">
+                <label for="image">Imagen</label>
+                <input type="file" name="image">
+            </div>
+
             <div class="register-but">
             <input type="submit" class= "submit" value="Agregar al listado">
             <input type="reset" class= "reset" value="Cancelar">
@@ -49,7 +57,7 @@
 
 </main>
 <!-- Footer del Sitio -->
-<%- include('./partials/footer') %> 
+<%- include('../partials/footer') %> 
     
 </body>
 </html>

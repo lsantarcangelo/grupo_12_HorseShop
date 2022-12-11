@@ -31,13 +31,13 @@ const productsController = {
     },
     
     create: (req, res) => {
-        res.render('productCreateForm');
+        res.render('./products/productCreateForm');
     },
 
     	// Detalle de un producto//
 	detail: (req, res) => {
 		let product = products.find(element=>element.id == req.params.id)
-		res.render('productDetail', {product});
+		res.render('./products/productDetail', {product});
 	},
 
     store: (req, res) => {
@@ -45,7 +45,7 @@ const productsController = {
             'id': products[products.length - 1].id + 1,
             'name': req.body.name,
             'description': req.body.description,
-            'image': 'default.png',
+            'image': req.file.filename,
             'category': req.body.category,
             'color': req.body.color,
             'size': req.body.size,
@@ -54,7 +54,7 @@ const productsController = {
 /*         res.send(req.body); */
         products.push(newProduct);
         fs.writeFileSync(productsPath, JSON.stringify(products, null, ''));
-        res.redirect('/');
+        res.redirect('/products');
     }
 }
 

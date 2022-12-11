@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router();
 
 
+
 //Rutas
 router.get('/', (_req, res) => {
     res.render('index')
@@ -16,24 +17,8 @@ router.get('/register', (req, res) => {
 });
 
 router.get('/productCart', (req, res)=>{
-    console.log('produtCart')
-    res.render('productCart')
+    res.render('../views/products/productCart')
 });
-
-router.get('/productDetail', (req, res)=>{
-    res.render('productDetail')
-});
-
-router.get('/productList', (req, res)=>{
-    res.render('productList')
-});
-router.get('/administrador', (req, res)=>{
-    res.render('administrador')
-    });
-
-router.get('/mujer', (req, res)=>{
-        res.render('mujer')
-    });
 
 
 module.exports = router
