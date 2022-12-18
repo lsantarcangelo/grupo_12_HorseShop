@@ -51,10 +51,38 @@ const productsController = {
             'size': req.body.size,
             'price': '1200',
         };
-/*         res.send(req.body); */
         products.push(newProduct);
         fs.writeFileSync(productsPath, JSON.stringify(products, null, ''));
         res.redirect('/products');
+    },
+
+    edit: (req, res) => {
+        let product = products.find(element => element.id == req.params.id);
+        res.render('./products/productEditForm', {product});
+    },
+
+    update: (req, res) => {
+        let productToUpdate = {
+            'id': req.params.id,
+            'name': req.body.name,
+            'description': req.body.description,
+            'image': req.file.filename,
+            'category': req.body.category,
+            'color': req.body.color,
+            'size': req.body.size,
+            'price': '1200',
+        };
+
+        let productUpdated = products.map(element => {
+            if (element.id == productToUpdate.id) {
+                return element = productToUpdate;
+            } else {
+                return element;
+            }
+        });
+
+        fs.writeFileSync(productsPath, JSON.stringify(ProductUpdated, null, ''));
+		res.redirect('/');
     }
 }
 

@@ -25,6 +25,11 @@ router.get('/create', productsController.create);
 router.post('/create', upload.single('image'), productsController.store);
 
 // Detalle de un producto // 
-router.get('/productDetail/:id/', productsController.detail); 
+router.get('/detail/:id/', productsController.detail); 
+
+// Editar un producto
+router.get('/edit/:id/', productsController.edit);
+router.put('/edit/:id/', upload.single('image'), productsController.update);
+
 
 module.exports = router;

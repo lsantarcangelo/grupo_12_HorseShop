@@ -1,0 +1,62 @@
+<!-- Head -->
+<%- include('../partials/head') %>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/productEditForm.css">
+</head>
+
+<body>
+<!-- Inicio de Cabecera del Sitio -->
+<%- include('../partials/header') %>
+        <main>
+            <h3>Editar Artículo <%= product.name %></h3>
+            <!-- Formulario  -->
+     <div class="registro">
+        <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="campo">
+            
+            <p><label>Nombre del producto</label></p>
+            <input type="text" name="name" id="name" value="<%= product.name %>">
+
+            <p><label>Descripcion</label></p>
+            <input type="text" name="description" id="description" value="<%= product.description %>">
+
+            <p><label>Categoria</label></p>
+            <input type="text" name="category" id="category" value="<%= product.category %>">
+
+            <div class="listacolor">
+                <p>Color</p>
+                <select name="color" id="color" class="seleccionar_color">
+                        <option value="negro">Negro</option>
+                        <option value="azul">Azul</option>
+                        <option value="blanco">Blanco</option>
+                </select>
+            </div>
+
+            <div class= "listatalle">
+                <p>Talle</p>
+                <select name="size" id="size" class="seleccionar_color">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                </select>
+            </div>
+            
+            <div class="img-create-form">
+                <label for="image">Imagen</label>
+                <input type="file" name="image">
+            </div>
+
+            <div class="register-but">
+            <input type="submit" class= "submit" value="Guardar">
+            <input type="reset" class= "reset" value="Cancelar">
+            </div>
+        </form>
+    </div>
+
+</main>
+<!-- Footer del Sitio -->
+<%- include('../partials/footer') %> 
+    
+</body>
+</html>
