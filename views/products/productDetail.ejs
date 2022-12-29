@@ -64,6 +64,10 @@
         </section>
  
     </main>
+    
+    <form action="/products/delete/<%= product.id%>" method="POST">
+        <button type="submit" class="button-delete">ELIMINAR</button>
+    </form>
 
     <%- include('../partials/footer')%>
 
