@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mainRouters = require('./src/routers/mainRouter');
+const mainRouter = require('./src/routers/mainRouter');
 const productsRouter = require('./src/routers/productsRouter');
+const usersRouter = require('./src/routers/usersRouter');
 const methodOverride = require('method-override');
 
 
@@ -26,7 +27,6 @@ app.listen(PORT, () => {
 
 
 //Rutas
-// router.get('/', mainRouters)
-app.use('/',mainRouters);
-
+app.use('/',mainRouter);
 app.use('/products', productsRouter);
+app.use('/', usersRouter);

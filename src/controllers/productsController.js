@@ -81,7 +81,7 @@ const productsController = {
             }
         });
 
-        fs.writeFileSync(productsPath, JSON.stringify(ProductUpdated, null, ''));
+        fs.writeFileSync(productsPath, JSON.stringify(productUpdated, null, ''));
 		res.redirect('/');
     }
 }

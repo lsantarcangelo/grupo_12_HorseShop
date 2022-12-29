@@ -70,7 +70,7 @@
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 30px;
-    font-size: 0.6 rem;
+    font-size: 0.6rem;
 }
 
 .botoncompra [type="submit"]{
@@ -79,11 +79,21 @@
     background-color: #25363d;  
     font-size: 0.8rem;
     margin-top: 10px;
-   }
-   
-   .botoncompra[type="submit"]:hover{
-       background-color: #64747c;
-   }
+}
+
+.botoncompra :hover{
+    background-color: #64747c;
+}
+
+.botoncompra a{
+    width: 60px;
+    margin: 10px 0 0 5px;
+    padding: 2px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #eae8e5;
+    background-color: #25363d; 
+}
 
 
 .path h6{
@@ -204,7 +214,7 @@
         justify-content: center;
         margin-top: 10px;
         margin-bottom: 30px;
-        font-size: 0.6 rem;
+        font-size: 0.6rem;
     }
     
     .botoncompra [type="submit"]{
@@ -218,6 +228,16 @@
        .botoncompra[type="submit"]:hover{
            background-color: #64747c;
        }
+
+.botoncompra a{
+    width: 60px;
+    margin: 10px 0 0 5px;
+    padding: 2px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #eae8e5;
+    background-color: #25363d; 
+}
     
     
     .path h6{
@@ -353,6 +373,16 @@
        .botoncompra[type="submit"]:hover{
            background-color: #64747c;
        }
+
+.botoncompra a{
+    width: 80px;
+    margin: 30px 0 0 5px;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #eae8e5;
+    background-color: #25363d; 
+}
     
     
     .path h6{

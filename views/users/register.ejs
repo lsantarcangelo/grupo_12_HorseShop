@@ -1,0 +1,93 @@
+<%- include('../partials/head')%>
+    <link rel="stylesheet" href="css\register.css">
+</head>
+
+<body>
+<%- include('../partials/header')%>
+    <main>
+        <!-- Formulario  -->
+        <div class="registro">
+            <form action="/register" method="POST" enctype="multipart/form-data">
+                <h2> CREAR CUENTA</h2>
+                <div class="nombre-apellido">
+                    <p>NOMBRE</p>
+                    <input 
+                        type="text" 
+                        name="firstName" 
+                        placeholder="Ej. Juan"
+                        value="<%= locals.oldData ? oldData.firstName : null %>"
+                    >
+                    <% if (locals.errors && errors.firstName) { %>
+                        <div class="form-error-msg">
+                            <%= errors.firstName.msg %> 
+                        </div>
+                    <% } %>
+                    <p>APELLIDO</p>
+                    <input 
+                    type="text" 
+                    name="lastName" 
+                    placeholder="Ej. Peréz"
+                    value="<%= locals.oldData ? oldData.lastName : null %>"
+                    >
+                    <% if (locals.errors && errors.lastName) { %>
+                        <div class="form-error-msg">
+                            <%= errors.lastName.msg %> 
+                        </div>
+                    <% } %>
+                    <p>CATEGORIA</p>
+                    <input 
+                    type="text" 
+                    name="category" 
+                    placeholder="Ej. Cliente"
+                    value="<%= locals.oldData ? oldData.category : null %>"
+                    >
+                    <% if (locals.errors && errors.category) { %>
+                        <div class="form-error-msg">
+                            <%= errors.category.msg %> 
+                        </div>
+                    <% } %>
+                    <p>EMAIL</p>    
+                    <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Ej. juanperez@mail.com"
+                    value="<%= locals.oldData ? oldData.email : null %>"
+                    >
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="form-error-msg">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
+                    <p>CONTRASEÑA</p>    
+                    <input type="password" name="password" placeholder="Abcd1234" minlength="6" maxlength="6">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="form-error-msg">
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
+                    <p>REPETIR CONTRASEÑA</p>  
+                    <input type="password" name="passConfirm" placeholder="Abcd1234" >
+                    <% if (locals.errors && errors.passConfirm) { %>
+                        <div class="form-error-msg">
+                            <%= errors.passConfirm.msg %> 
+                        </div>
+                    <% } %>
+                    <p>IMAGEN</p>
+                    <input type="file" name="image">
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="form-error-msg">
+                            <%= errors.image.msg %> 
+                        </div>
+                    <% } %>
+                </div>  
+                <div class="register-but">
+                    <input type="submit" class= "submit" value="ENVIAR">
+                    <input type="reset" class= "reset" value="BORRAR">
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer')%>
+
+</body>
+</html>
