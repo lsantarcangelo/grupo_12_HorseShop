@@ -32,7 +32,7 @@ router.get('/edit/:id/', productsController.edit);
 router.put('/edit/:id/', upload.single('image'), productsController.update);
 
 //Eliminar un producto
-router.post('/delete/:id', productsController.destroy)
+router.post('/delete/:id/', productsController.destroy)
 
 
 module.exports = router;

@@ -52,22 +52,17 @@
                     <div class="botoncompra">
                         <input type="submit" class="submit" value="Agregar al carrito">
                         <a href="/products/edit/<%= product.id %> ">Editar</a>
+                        <form action="/products/delete/<%= product.id%>" method="POST">
+                            <button type="submit" class="button-delete">Eliminar</button>
+                        </form>
                     </div>
-
-
-
-
-                </div>    
-            
-            </div>
- 
+                        
+                </div>             
+            </div> 
         </section>
  
     </main>
     
-    <form action="/products/delete/<%= product.id%>" method="POST">
-        <button type="submit" class="button-delete">ELIMINAR</button>
-    </form>
 
     <%- include('../partials/footer')%>
 
