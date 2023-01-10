@@ -1,0 +1,18 @@
+.user-profile {
+    margin: 5px;
+    padding: 5px;
+}
+
+.image-container {
+    width: 40%;
+    margin: auto;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-detail {
+    font-size: 0.5 rem;
+}

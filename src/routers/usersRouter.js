@@ -28,7 +28,7 @@ const validations = [
     body('passConfirm').notEmpty().withMessage('Por favor confirme su contrasena'),
     body('image').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['jpg', 'png'];
+        let acceptedExtensions = ['.jpg', '.png'];
         if(!file) {
             throw new Error('Debe cargar una imagen');
         } else {
@@ -44,9 +44,13 @@ const validations = [
 //Login de usuario
 router.get('/login', usersController.login);
 
+//Perfil de usuario
+router.get('/userProfile/:id', usersController.profile);
+
 //Formulario de registro de nuevo usuario
 router.get('/register', usersController.register);
-//Procesar el registro de nuevo usuario
-router.post('/register', upload.single('image'), validations, usersController.store);
+
+//Procesar el registro de nuevo usuario //AGREGAR validations como middleware luego de debuggearlo//
+router.post('/register', upload.single('image'), usersController.store);
 
 module.exports = router;

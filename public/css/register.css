@@ -97,10 +97,15 @@ font-size: 14px;
     
     /*REGISTER TABLET*/
 
+    .registro {
+        width: 55%;
+        margin: 0px auto
+    }
+
     .registro form{
         border: #25363d 1px solid;
         margin: 20px;
-        padding: 10px;
+        padding: 10px;     
     }
 
     .registro form h2{

@@ -52,7 +52,7 @@ const productsController = {
             'price': '1200',
         };
         products.push(newProduct);
-        fs.writeFileSync(productsPath, JSON.stringify(products, null, ''));
+        fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
         res.redirect('/products');
     },
 
@@ -81,7 +81,7 @@ const productsController = {
             }
         });
 
-        fs.writeFileSync(productsPath, JSON.stringify(productUpdated, null, ''));
+        fs.writeFileSync(productsPath, JSON.stringify(productUpdated, null, ' '));
 		res.redirect('/');
     },
 

@@ -1,0 +1,36 @@
+<!-- Head -->
+<%- include('../partials/head')%>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/userProfile.css">
+</head>
+
+<body>
+<!-- Inicio de Cabecera del Sitio -->
+<%- include('../partials/header')%>
+    <main>
+        <section class="container_detalle">
+                
+            <div class="user-profile">
+                <div class="image-container">
+                    <img src="/images/users/<%= userProfile.image %> " alt="Imagen de Usuario" class="user-image">
+                </div>
+
+                <div class="user-detail">
+
+                    <p> <%= userProfile.firstName %> </p>
+
+                    <p> <%= userProfile.lastName %>  </p>
+
+                    <p> <%= userProfile.email %>  </p>
+            </div> 
+        </section>
+ 
+    </main>
+    
+
+    <%- include('../partials/footer')%>
+
+</body>
+</html>
