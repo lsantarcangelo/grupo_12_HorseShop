@@ -1,137 +1,137 @@
 [
- {
-  "id": 1,
-  "firstName": "Donnie",
-  "lastName": "Bedin",
-  "email": "dbedin0@desdev.cn",
-  "password": "Y9cXNuIqkm",
-  "category": "customer",
-  "image": "https://robohash.org/assumendareprehenderiteum.png?size=50x50&set=set1"
- },
- {
-  "id": 2,
-  "firstName": "Garrek",
-  "lastName": "Kears",
-  "email": "gkears1@webs.com",
-  "password": "Nm8e9F5Xxsvf",
-  "category": "customer",
-  "image": "https://robohash.org/ducimusautipsum.png?size=50x50&set=set1"
- },
- {
-  "id": 3,
-  "firstName": "Dulcy",
-  "lastName": "Wollaston",
-  "email": "dwollaston2@nationalgeographic.com",
-  "password": "40QNO1XV12",
-  "category": "customer",
-  "image": "https://robohash.org/fugasitaut.png?size=50x50&set=set1"
- },
- {
-  "id": 4,
-  "firstName": "Shaylah",
-  "lastName": "Wimpey",
-  "email": "swimpey3@ustream.tv",
-  "password": "zBF7JdULF2F",
-  "category": "customer",
-  "image": "https://robohash.org/quosipsamdolor.png?size=50x50&set=set1"
- },
- {
-  "id": 5,
-  "firstName": "Mari",
-  "lastName": "D'Aubney",
-  "email": "mdaubney4@businessinsider.com",
-  "password": "emy8YMn",
-  "category": "customer",
-  "image": "https://robohash.org/minussolutaet.png?size=50x50&set=set1"
- },
- {
-  "id": 6,
-  "firstName": "Greg",
-  "lastName": "Ludman",
-  "email": "gludman5@i2i.jp",
-  "password": "ZqkO2atc",
-  "category": "admin",
-  "image": "https://robohash.org/doloremetdoloribus.png?size=50x50&set=set1"
- },
- {
-  "id": 7,
-  "firstName": "Connie",
-  "lastName": "Rougier",
-  "email": "crougier6@cnn.com",
-  "password": "WtxQcRm",
-  "category": "customer",
-  "image": "https://robohash.org/etetfugiat.png?size=50x50&set=set1"
- },
- {
-  "id": 8,
-  "firstName": "Alonso",
-  "lastName": "McIlenna",
-  "email": "amcilenna7@simplemachines.org",
-  "password": "0YTpt0B8D",
-  "category": "customer",
-  "image": "https://robohash.org/autnamquos.png?size=50x50&set=set1"
- },
- {
-  "id": 9,
-  "firstName": "Allie",
-  "lastName": "Leabeater",
-  "email": "aleabeater8@taobao.com",
-  "password": "KNn6Xo5fjL",
-  "category": "customer",
-  "image": "https://robohash.org/namaccusamusprovident.png?size=50x50&set=set1"
- },
- {
-  "id": 10,
-  "firstName": "Ashla",
-  "lastName": "Faill",
-  "email": "afaill9@amazon.de",
-  "password": "1dsHeGK",
-  "category": "customer",
-  "image": "https://robohash.org/saepeperferendisvel.png?size=50x50&set=set1"
- },
- {
-  "id": 11,
-  "firstName": "Pedro",
-  "lastName": "Gomez",
-  "email": "pedro.gomez@gmail.com",
-  "password": "abc123",
-  "category": "Customer",
-  "image": "user1673204812302.jpg"
- },
- {
-  "id": 12,
-  "firstName": "Mick",
-  "lastName": "Jagger",
-  "email": "mick.jagger@gmail.com",
-  "password": "$2a$10$rPhKqf8kisHnm9u2E2wd7u9ma3X9fCQJ50SRDGLiNI8sDrYc7Z58a",
-  "category": "Customer",
-  "image": "user1673206016637.jpg"
- },
- {
-  "id": 13,
-  "firstName": "Keith",
-  "lastName": "Richards",
-  "email": "keith@gmail.com",
-  "password": "$2a$10$E43D/1XsGeiFovOHwW/ql.z9t5VdOTKHxRn7v0xGNWkrJBnyufc1q",
-  "category": "Customer",
-  "image": "user1673210420364.jpg"
- },
- {
-  "id": 14,
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "john@gmail.com",
-  "password": "$2a$10$OxurUJUqxY9Ltg2GfgUou.DyiLjDd6jOWpnV0ofGKOS6uYojff9hC",
-  "category": "Customer",
-  "image": "user1673309913342.jpg"
- },
- {
-  "id": 15,
-  "firstName": "Paul",
-  "lastName": "McCartney",
-  "email": "paul@gmail.com",
-  "password": "$2a$10$76VdRlmc9ZjCnLQEkGFcSe9YPnnOC330B/P0AWzfNwmEH4EEfjcoG",
-  "category": "Customer",
-  "image": "user1673310847926.jpg"
- }
+    {
+    "id": 1,
+    "firstName": "Donnie",
+    "lastName": "Bedin",
+    "email": "dbedin0@desdev.cn",
+    "password": "Y9cXNuIqkm",
+    "category": "customer",
+    "image": "https://robohash.org/assumendareprehenderiteum.png?size=50x50&set=set1"
+    },
+    {
+    "id": 2,
+    "firstName": "Garrek",
+    "lastName": "Kears",
+    "email": "gkears1@webs.com",
+    "password": "Nm8e9F5Xxsvf",
+    "category": "customer",
+    "image": "https://robohash.org/ducimusautipsum.png?size=50x50&set=set1"
+    },
+    {
+    "id": 3,
+    "firstName": "Dulcy",
+    "lastName": "Wollaston",
+    "email": "dwollaston2@nationalgeographic.com",
+    "password": "40QNO1XV12",
+    "category": "customer",
+    "image": "https://robohash.org/fugasitaut.png?size=50x50&set=set1"
+    },
+    {
+    "id": 4,
+    "firstName": "Shaylah",
+    "lastName": "Wimpey",
+    "email": "swimpey3@ustream.tv",
+    "password": "zBF7JdULF2F",
+    "category": "customer",
+    "image": "https://robohash.org/quosipsamdolor.png?size=50x50&set=set1"
+    },
+    {
+    "id": 5,
+    "firstName": "Mari",
+    "lastName": "D'Aubney",
+    "email": "mdaubney4@businessinsider.com",
+    "password": "emy8YMn",
+    "category": "customer",
+    "image": "https://robohash.org/minussolutaet.png?size=50x50&set=set1"
+    },
+    {
+    "id": 6,
+    "firstName": "Greg",
+    "lastName": "Ludman",
+    "email": "gludman5@i2i.jp",
+    "password": "ZqkO2atc",
+    "category": "admin",
+    "image": "https://robohash.org/doloremetdoloribus.png?size=50x50&set=set1"
+    },
+    {
+    "id": 7,
+    "firstName": "Connie",
+    "lastName": "Rougier",
+    "email": "crougier6@cnn.com",
+    "password": "WtxQcRm",
+    "category": "customer",
+    "image": "https://robohash.org/etetfugiat.png?size=50x50&set=set1"
+    },
+    {
+    "id": 8,
+    "firstName": "Alonso",
+    "lastName": "McIlenna",
+    "email": "amcilenna7@simplemachines.org",
+    "password": "0YTpt0B8D",
+    "category": "customer",
+    "image": "https://robohash.org/autnamquos.png?size=50x50&set=set1"
+    },
+    {
+    "id": 9,
+    "firstName": "Allie",
+    "lastName": "Leabeater",
+    "email": "aleabeater8@taobao.com",
+    "password": "KNn6Xo5fjL",
+    "category": "customer",
+    "image": "https://robohash.org/namaccusamusprovident.png?size=50x50&set=set1"
+    },
+    {
+    "id": 10,
+    "firstName": "Ashla",
+    "lastName": "Faill",
+    "email": "afaill9@amazon.de",
+    "password": "1dsHeGK",
+    "category": "customer",
+    "image": "https://robohash.org/saepeperferendisvel.png?size=50x50&set=set1"
+    },
+    {
+    "id": 11,
+    "firstName": "Pedro",
+    "lastName": "Gomez",
+    "email": "pedro.gomez@gmail.com",
+    "password": "abc123",
+    "category": "Customer",
+    "image": "user1673204812302.jpg"
+    },
+    {
+    "id": 12,
+    "firstName": "Mick",
+    "lastName": "Jagger",
+    "email": "mick.jagger@gmail.com",
+    "password": "$2a$10$rPhKqf8kisHnm9u2E2wd7u9ma3X9fCQJ50SRDGLiNI8sDrYc7Z58a",
+    "category": "Customer",
+    "image": "user1673206016637.jpg"
+    },
+    {
+    "id": 13,
+    "firstName": "Keith",
+    "lastName": "Richards",
+    "email": "keith@gmail.com",
+    "password": "$2a$10$E43D/1XsGeiFovOHwW/ql.z9t5VdOTKHxRn7v0xGNWkrJBnyufc1q",
+    "category": "Customer",
+    "image": "user1673210420364.jpg"
+    },
+    {
+    "id": 14,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@gmail.com",
+    "password": "$2a$10$OxurUJUqxY9Ltg2GfgUou.DyiLjDd6jOWpnV0ofGKOS6uYojff9hC",
+    "category": "Customer",
+    "image": "user1673309913342.jpg"
+    },
+    {
+    "id": 15,
+    "firstName": "Paul",
+    "lastName": "McCartney",
+    "email": "paul@gmail.com",
+    "password": "$2a$10$76VdRlmc9ZjCnLQEkGFcSe9YPnnOC330B/P0AWzfNwmEH4EEfjcoG",
+    "category": "Customer",
+    "image": "user1673310847926.jpg"
+    }
 ]

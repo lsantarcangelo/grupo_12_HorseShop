@@ -1,76 +1,109 @@
-const fs = require('fs');
-const path = require('path');
-const usersPath = path.join(__dirname, '../data/usersData.json')
-const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
+const { validationResult } = require('express-validator'); 
 
+const User = require('../models/User');
 
-const usersController = {
-    findAll: () => {
-        return users
-    },
-    
-    findByPk: (id) => {
-        let userFound = users.find(element => element.id === id);
-        return userFound
-    },
-    
-    findByField: (field, text) => {
-        let userFound = users.find(element => element[field] === text);
-        return userFound
-    },
+const controller = {
+	register: (req, res) => {
+		return res.render('../views/users/register');
+	},
+	prossesRegister: (req, res) => {
 
-    login: (req, res) => {
-        res.render('./users/login')
-    },
+		const resultValidation = validationResult(req);
+				
+			if (resultValidation.errors.length > 0) {
+				return res.render('../views/users/register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
 
-    register: (req, res) => {
-        res.render('./users/register')
-    },
+		let userInDB = User.findByField('email', req.body.email);
 
-    profile: (req, res) => {
-        let userProfile = users.find(element => element.id == req.params.id);
-        res.render('./users/userProfile', {userProfile});
-    },
+		if (userInDB) {
+			return res.render('../views/users/register', {
+				errors: {
+					email: {
+						msg: 'Este correo electronico ya se encuentra registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
 
-    store: (req, res) => {
-        const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
-            return res.render('./users/register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
-        }
-        //let userCheck = users.find(element => element.email === req.body.email);
-        //if (userCheck) {
-        //    return res.render('./users/register', {
-        //        errors: {
-        //            email: 'Este mail ya esta registrado'
-        //        },
-        //        oldData: req.body
-        //    })
-        //}
-        let newId = users[users.length - 1].id + 1;
-        let newUser = {
-            'id': newId,
-            'firstName': req.body.firstName,
-            'lastName': req.body.lastName,
-            'email': req.body.email,
-            'password': bcryptjs.hashSync(req.body.password, 10),
-            'category': req.body.category,
-            'image': req.file.filename
-        };
-        users.push(newUser);
-        fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '));
-        res.redirect('/userProfile/' + newId);
-    },
+		let userTOCreate = {
+			...req.body,
+			password: bcryptjs.hashSync(req.body.password, 10),
+			passConfirm: bcryptjs.hashSync(req.body.password, 10),
+			image: req.file.filename
+		}
+		
+		User.create(userTOCreate);
 
-    delete: (req, res) => {
-        let finalUsers = users.filter(element => element.id != req.params.id);
-        fs.writeFileSync(usersPath, JSON.stringify(finalUsers, null, ' '));
-        res.redirect('/');
-    }
+		return res.render('../views/users/login')
+
+	},
+	login: (req, res) => {
+		return res.render('../views/users/login');
+	},
+
+	loginProcess: (req, res) => {
+		const resultValidation = validationResult(req);
+				
+			if (resultValidation.errors.length > 0) {
+				return res.render('../views/users/login', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+		
+
+		let userToLogin = User.findByField('email', req.body.email);
+		if(userToLogin) {
+			
+			let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+			if (correctPassword) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+
+				if(req.body.recordame) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+
+				return res.redirect('userProfile');
+			} 
+			return res.render('../views/users/login', {
+				errors: {
+					email: {
+						msg: 'Los datos no coinciden'
+					}
+				}
+			});
+		}
+
+		return res.render('../views/users/login', {
+			errors: {
+				email: {
+					msg: 'Este correo electrónico no esta asociado a ninguna cuenta'
+				}
+			}
+		});
+	},
+	
+	profile: (req, res) => {
+		return res.render('../views/users/userProfile', {
+			user: req.session.userLogged
+		});
+	},
+
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
+
 }
 
-module.exports = usersController;
+
+
+module.exports = controller;

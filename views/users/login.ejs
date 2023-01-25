@@ -6,15 +6,36 @@
 <%- include('../partials/header')%>
     <main>
         <!-- Inicio de sesión -->
+        
         <div class="log-in">
-        <form class="login" action="/log-in" method="POST">
+        <form class="login" action="/login" method="POST" >
             <h2> YA TENGO UNA CUENTA</h2>
-            <p>PARA INICIAR SESION INGRESE EMAIL Y CONTRASEÑA.
-            </p>
-            <div class="nombre-usuario">
-            <input type="text" name="user" placeholder=" Nombre de usuario" required>
-            <input type="password" name="pass" placeholder=" Contraseña" required minlength="6" maxlength="6">  
-        </div>
+            <p>PARA INICIAR SESION INGRESE EMAIL Y CONTRASEÑA.</p>            
+            <p>EMAIL</p>    
+            <input 
+            type="text" 
+            name="email" 
+            placeholder="Ej. juanperez@mail.com"
+            value="<%= locals.oldData ? oldData.email : null %>"
+            >
+            <% if (locals.errors && errors.email) { %>
+                <div class="form-error-msg">
+                    <%= errors.email.msg %> 
+                </div>
+            <% } %>
+            <p>CONTRASEÑA</p>    
+            <input type="password" name="password" placeholder="Abcd1234" minlength="6" maxlength="6">
+            <% if (locals.errors && errors.password) { %>
+                <div class="form-error-msg">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>
+                    <div class="remember-me">
+                        <label >
+                        <imput type="radio" name="recordame" value="recordame" >Recordarme
+                        </label>    
+                    </div>       
+            </div>
             <div class="login-but">
             <input type="submit" class= "submit" value="INICIAR SESION">
             </div>

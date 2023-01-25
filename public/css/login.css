@@ -52,6 +52,29 @@ input[type="password"]{
     font-style: italic;
     align-content: center;
 }
+.remember-me{
+    font-size: 12px;
+    height: 30px;
+    width: 60%;
+    padding-left: 5px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    font-style: italic;
+    display: flex;    
+    align-content: center;
+    flex-direction: unset;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.square{
+    border:#25363d 1px solid;
+    border-radius: 5%;
+    margin: 5px 5px;
+    height: 1rem;
+    width: 1rem;
+}
 
 .login-but{
 display: flex;
@@ -337,4 +360,5 @@ justify-content: space-around;
             }
 
     }
+    
     

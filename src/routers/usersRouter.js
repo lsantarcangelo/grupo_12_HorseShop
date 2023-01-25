@@ -51,6 +51,6 @@ router.get('/userProfile/:id', usersController.profile);
 router.get('/register', usersController.register);
 
 //Procesar el registro de nuevo usuario //AGREGAR validations como middleware luego de debuggearlo//
-router.post('/register', upload.single('image'), usersController.store);
+router.post('/register', upload.single('image'), validations, usersController.store);
 
 module.exports = router;

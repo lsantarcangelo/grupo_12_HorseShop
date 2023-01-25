@@ -7,7 +7,7 @@
     <main>
         <!-- Formulario  -->
         <div class="registro">
-            <form action="/register" method="POST" enctype="multipart/form-data">
+            <form method="POST" action="/register" enctype="multipart/form-data">
                 <h2> CREAR CUENTA</h2>
                 <div class="nombre-apellido">
                     <p>NOMBRE</p>
@@ -15,6 +15,7 @@
                         type="text" 
                         name="firstName" 
                         placeholder="Ej. Juan"
+                        class="from-control"<%= locals.errors && errors.firstName ? 'is-invalid' : 'is-valid'  %> 
                         value="<%= locals.oldData ? oldData.firstName : null %>"
                     >
                     <% if (locals.errors && errors.firstName) { %>
@@ -48,7 +49,7 @@
                     <% } %>
                     <p>EMAIL</p>    
                     <input 
-                    type="email" 
+                    type="text" 
                     name="email" 
                     placeholder="Ej. juanperez@mail.com"
                     value="<%= locals.oldData ? oldData.email : null %>"
@@ -66,22 +67,25 @@
                         </div>
                     <% } %>
                     <p>REPETIR CONTRASEÑA</p>  
-                    <input type="password" name="passConfirm" placeholder="Abcd1234" >
+                    <input type="password" name="passConfirm" placeholder="Abcd1234"minlength="6" maxlength="6" >
                     <% if (locals.errors && errors.passConfirm) { %>
                         <div class="form-error-msg">
                             <%= errors.passConfirm.msg %> 
                         </div>
                     <% } %>
                     <p>IMAGEN</p>
-                    <input type="file" name="image">
+                    <input type="file"
+                        name="image" 
+                        class="from-control"<%= locals.errors && errors.image ? 'is-invalid' : null %>">
                     <% if (locals.errors && errors.image) { %>
                         <div class="form-error-msg">
                             <%= errors.image.msg %> 
                         </div>
                     <% } %>
-                </div>  
+                </div> 
+                <br> 
                 <div class="register-but">
-                    <input type="submit" class= "submit" value="ENVIAR">
+                    <input type="submit" class= "submit" value="ENVIAR"><br>
                     <input type="reset" class= "reset" value="BORRAR">
                 </div>
             </form>
