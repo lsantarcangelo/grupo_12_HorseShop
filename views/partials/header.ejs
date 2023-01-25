@@ -17,11 +17,25 @@
         </div>
         <!-- Account -->
         <div class="account">
-            <div class="account-item">
-                <a href="/login">
-                    <i class="fas fa-user"></i>
-                    <p>Login</p>
-                </a>
+            <div class="account-item">            
+                <% if (locals.isLogged) { %>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  >
+							<img src="/public/images/users/<%= locals.userLogged.image %>" >
+							Hola <%= locals.userLogged.firstName %> 
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/userProfile">Mi cuenta</a>
+							<li><hr class="dropdown-divider"></li>
+							<a class="dropdown-item" href="/logout">Logout</a>
+						</ul>
+					</li>
+				<% } else { %>
+                    
+                        <i class="fas fa-user"></i>
+					<li class="nav-item"><a class="nav-link" href="/register">Registrarse</a></li>
+					<li class="nav-item"><a class="nav-link" href="/login">Iniciar sesion</a></li>
+				<% } %>
             </div>
             <div class="account-item">
                 <a href="/productCart">
@@ -30,14 +44,14 @@
                 </a>
             </div>
             <div class="account-item">
-                <a href="">
+                <a href="#">
                     <i class="far fa-heart"></i>
                     <p>Favoritos</p>
                 </a>
             </div>
         </div>
     </div>
-    <!-- Barra de navegacion -->
+    <!-- Barra de navegacion id="dropUser" role="button"  data-bs-toggle="dropdown" aria-expanded="false" //width="40" style="border-radius: 100%;"-->
     <nav class="nav-bar">
         <ul>
             <li><a href="/">Home</a></li>

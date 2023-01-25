@@ -1,56 +1,37 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
 const path = require('path');
-const { body } = require('express-validator');
+// controlers
 const usersController = require('../controllers/usersController');
 
+//middelware
+const validations = require('../middleware/validateRegisterMiddeware');
+const validateLogin = require('../middleware/validateLoginMiddelware');
+const guestMiddleware =require('../middleware/guestMiddelware')
+const authMiddleware= require('../middleware/authMiddleware')
+
+
 // Configuracion Multer
-const multer = require('multer');
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/images/users'));
-    },
-    filename: (req, file, cb) => {
-        const newFilename = 'user' + Date.now() + path.extname(file.originalname);
-        cb(null, newFilename);
-    }
-});
-const upload = multer({ storage });
-
-const validations = [
-    body('firstName').notEmpty().withMessage('Debe completar el campo Nombre'),
-    body('lastName').notEmpty().withMessage('Debe completar el campo Apellido'),
-    body('category').notEmpty().withMessage('Debe completar el campo Categoria'),
-    body('email')
-        .notEmpty().withMessage('Debe ingresar un correo electronico').bail()
-        .isEmail().withMessage('Debe ingresar un correo válido'),
-    body('passwprd').notEmpty().withMessage('Debe escribir una contrasena'),
-    body('passConfirm').notEmpty().withMessage('Por favor confirme su contrasena'),
-    body('image').custom((value, { req }) => {
-        let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png'];
-        if(!file) {
-            throw new Error('Debe cargar una imagen');
-        } else {
-            let fileExtension = path.extname(file.originalname);
-            if(!acceptedExtensions.includes(fileExtension)) {
-                throw new Error(`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`)
-            }
-        }
-        return true;
-    })
-];
-
-//Login de usuario
-router.get('/login', usersController.login);
-
-//Perfil de usuario
-router.get('/userProfile/:id', usersController.profile);
+const uploadFile = require('../middleware/multerMiddelware');
 
 //Formulario de registro de nuevo usuario
-router.get('/register', usersController.register);
+router.get('/register', guestMiddleware, usersController.register);
 
 //Procesar el registro de nuevo usuario //AGREGAR validations como middleware luego de debuggearlo//
-router.post('/register', upload.single('image'), validations, usersController.store);
+router.post('/register', uploadFile.single('image'), validations, usersController.prossesRegister);
+
+//Login de usuario
+router.get('/login',guestMiddleware , usersController.login);
+
+//prosesar de usuario
+router.post('/login', validateLogin, usersController.loginProcess);
+
+//Perfil de usuario
+router.get('/userProfile',authMiddleware , usersController.profile);
+
+// Logout
+router.get('/logout/', usersController.logout);
+
 
 module.exports = router;

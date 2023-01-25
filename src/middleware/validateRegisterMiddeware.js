@@ -10,7 +10,7 @@ const validations = [
         .isEmail().withMessage('Debe ingresar un correo válido'),
     body('password').trim().notEmpty().withMessage('Debe escribir una contrasena'),
     body('passConfirm').trim().notEmpty().withMessage('Por favor confirme su contrasena').bail()
-        .custom((value, {req}) => value === req.body.password).withMessage("La contraseña no coincide"),
+        .custom((value, {req}) => value === req.body.password).withMessage("Las contraseña no coincide"),
     body('image').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png'];
