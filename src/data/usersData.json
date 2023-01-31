@@ -133,5 +133,15 @@
   "password": "$2a$10$76VdRlmc9ZjCnLQEkGFcSe9YPnnOC330B/P0AWzfNwmEH4EEfjcoG",
   "category": "Customer",
   "image": "user1673310847926.jpg"
+ },
+ {
+  "id": 16,
+  "firstName": "Pablo",
+  "lastName": "Marmol",
+  "category": "customer",
+  "email": "pablo@gmail.com",
+  "password": "$2a$10$4be5jUjUv20f2P9DNxyh5.jzNpt2Nb45mx3Zm.o9czX38MJdrMJJ.",
+  "passConfirm": "$2a$10$tPIYaescH3.8fBy/2W25mukdjMJtXG1w6UlT/EOcpwCll5bDyTQ5e",
+  "image": "1675194443581_img.jpg"
  }
 ]

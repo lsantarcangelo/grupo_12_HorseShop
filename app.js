@@ -6,7 +6,7 @@ const productsRouter = require('./src/routers/productsRouter');
 const usersRouter = require('./src/routers/usersRouter');
 const methodOverride = require('method-override');
 const session = require('express-session');
-const cookies =require('cookie-parser')
+const cookies =require('cookie-parser');
 
 
 const PORT = process.env.PORT || 3000
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
-app.use(cookies())
+app.use(cookies());
 app.use(session({
     secret: 'secreto!!!',
     resave: false,

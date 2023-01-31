@@ -7,7 +7,7 @@ const controller = {
 	register: (req, res) => {
 		return res.render('../views/users/register');
 	},
-	prossesRegister: (req, res) => {
+	processRegister: (req, res) => {
 
 		const resultValidation = validationResult(req);
 				
@@ -70,7 +70,7 @@ const controller = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('userProfile');
+				return res.redirect('/');
 			} 
 			return res.render('../views/users/login', {
 				errors: {
@@ -92,7 +92,7 @@ const controller = {
 	
 	profile: (req, res) => {
 		return res.render('../views/users/userProfile', {
-			user: req.session.userLogged
+			userProfile: req.session.userLogged
 		});
 	},
 
