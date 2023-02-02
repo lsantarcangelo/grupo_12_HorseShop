@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const productsPath = path.join(__dirname, '../data/productsData.json')
 const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
+const db = require('../../database/models');
 
 
 
@@ -31,7 +32,10 @@ const productsController = {
     },
     
     create: (req, res) => {
-        res.render('./products/productCreateForm');
+        db.Category.findAll()
+            .then(function(categories) {
+                return res.render('./products/productCreateForm', {categories:categories});
+            })
     },
 
     	// Detalle de un producto//

@@ -1,0 +1,92 @@
+DROP DATABASE IF EXISTS aries_db;
+CREATE DATABASE aries_db;
+
+CREATE TABLE `aries_db`.`categories` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `is_active` TINYINT NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+
+CREATE TABLE `aries_db`.`colors` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `is_active` TINYINT NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+
+CREATE TABLE `aries_db`.`sizes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `is_active` TINYINT NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+
+CREATE TABLE `aries_db`.`products` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(500) NOT NULL,
+  `product_img` VARCHAR(100) NULL,
+  `category_id` INT(10) NOT NULL,
+  `color_id` INT(10) NOT NULL,
+  `size_id` INT(10) NOT NULL,
+  `stock` INT(10) NULL,
+  `price` DECIMAL(10,2) NOT NULL,
+  `is_active` TINYINT NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  INDEX `fk_category_id_idx` (`category_id` ASC),
+  INDEX `fk_color_id_idx` (`color_id` ASC),
+  INDEX `fk_size_id_idx` (`size_id` ASC),
+  CONSTRAINT `fk_category_id`
+    FOREIGN KEY (`category_id`)
+    REFERENCES `aries_db`.`categories` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_color_id`
+    FOREIGN KEY (`color_id`)
+    REFERENCES `aries_db`.`colors` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_size_id`
+    FOREIGN KEY (`size_id`)
+    REFERENCES `aries_db`.`sizes` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+
+CREATE TABLE `aries_db`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `firstName` VARCHAR(100) NOT NULL,
+  `lastName` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `type` VARCHAR(100) NOT NULL,
+  `user_img` VARCHAR(100) NOT NULL,
+  `is_active` TINYINT NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+

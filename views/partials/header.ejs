@@ -16,27 +16,37 @@
             </a>
         </div>
         <!-- Account -->
-        <div class="account">
-            <div class="account-item">            
-                <% if (locals.isLogged) { %>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"  >
-							<img src="/public/images/users/<%= locals.userLogged.image %>" >
-							Hola <%= locals.userLogged.firstName %> 
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="/userProfile">Mi cuenta</a>
-							<li><hr class="dropdown-divider"></li>
-							<a class="dropdown-item" href="/logout">Logout</a>
-						</ul>
-					</li>
-				<% } else { %>
-                    
+        <div class="account">                      
+            <% if (locals.isLogged) { %>
+                <div class="account-item">
+                    <img src="/public/images/users/<%= locals.userLogged.image %>">
+                    <p> Hola <%= locals.userLogged.firstName %></p>
+                </div>
+                <div class="account-item">
+                    <a class="nav-link" href="/userProfile">
+                        <p>Mi cuenta</p>
+                    </a>
+                </div>
+                <div class="account-item">
+                    <a class="nav-link" href="/logout">
+                        <p>Logout</p>
+                    </a>
+                </div>
+            <% } else { %>
+                <div class="account-item">
+                    <a class="nav-link" href="/register">
+                        <i class="far fa-user"></i>
+                        <p>Registrarse</p>
+                    </a>                 
+                </div>
+                <div class="account-item">
+                    <a class="nav-link" href="/login">
                         <i class="fas fa-user"></i>
-					<li class="nav-item"><a class="nav-link" href="/register">Registrarse</a></li>
-					<li class="nav-item"><a class="nav-link" href="/login">Iniciar sesion</a></li>
-				<% } %>
-            </div>
+                        <p>Iniciar Sesión</p>
+                    </a>
+                </div>
+            <% } %>
+    
             <div class="account-item">
                 <a href="/productCart">
                     <i class="fas fa-shopping-cart"></i>
