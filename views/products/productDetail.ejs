@@ -17,7 +17,7 @@
                 
             <div class="detalle_producto">
                 <div class="foto_detalle">
-                    <img src="/images/<%= product.image %> " alt="" class="fotodetalle">
+                    <img src="/images/<%= product.product_img %> " alt="" class="fotodetalle">
                 </div>
             
 
@@ -31,27 +31,21 @@
 
                     <div class="listacolor">
                         <h3>COLOR</h3>
-                        <select name="color" id="seleccionar_color">
-                                <option value="negro">Negro</option>
-                                <option value="azul">Azul</option>
-                                <option value="blanco">Blanco</option>
-                        </select>
+                        <p><%= product.color.name %> </p>
                     </div>
 
 
                     <div class= "listatalle">
                         <h3>TALLE</h3>
-                        <select name="color" id="seleccionar_color">
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                        </select>
+                        <p><%= product.size.name %> </p>
                     </div>
 
 
                     <div class="botoncompra">
                         <input type="submit" class="submit" value="Agregar al carrito">
-                        <a href="/products/edit/<%= product.id %> ">Editar</a>
+                        <a href="/products/edit/<%= product.id %> ">
+                            Editar
+                        </a>
                         <form action="/products/delete/<%= product.id%>" method="POST">
                             <button type="submit" class="button-delete">Eliminar</button>
                         </form>

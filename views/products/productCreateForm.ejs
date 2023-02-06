@@ -10,50 +10,64 @@
 <!-- Inicio de Cabecera del Sitio -->
 <%- include('../partials/header') %>
         <main>
-            <h1>ACCESO A ADMINISTRADOR</h1>
+            <h2>ACCESO A ADMINISTRADOR</h2>
             <h3>AGREGAR ARTICULOS</h3>
             <!-- Formulario  -->
-     <div class="registro">
+    <div class="registro">
         <form action="/products/create" method="POST" enctype="multipart/form-data" class="campo">
-            
-            <p><label>Nombre del producto</label></p>
-            <input type="text" name="name" id="name" size="12px">
-
-            <p><label>Descripcion</label></p>
-            <input type="text" name="description" id="description" size="12px">
-
-            <p><label>Categoria</label></p>
-            <input type="text" name="category" id="category" size="12px">
-
+            <div>
+                <label>Nombre del producto</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label>Descripción</label>
+                <input type="text" name="description" id="description">
+            </div>
+            <div>
+                <label>Categoría</label>
+                <select name="category" id="category">
+                    <% for( let i = 0; i < categories.length; i++ ) { %>
+                        <option value="<%= categories[i].id %>">
+                            <%= categories[i].name %> 
+                        </option>
+                    <% } %>
+                </select>
+            </div>
             <div class="listacolor">
-                <p>Color</p>
+                <label>Color</label>
                 <select name="color" id="color" class="seleccionar_color">
-                        <option value="negro">Negro</option>
-                        <option value="azul">Azul</option>
-                        <option value="blanco">Blanco</option>
+                    <% for( let i = 0; i < colors.length; i++ ) { %>                    
+                        <option value="<%= colors[i].id %> ">
+                            <%= colors[i].name %> 
+                        </option>
+                    <% } %>    
                 </select>
             </div>
-
             <div class= "listatalle">
-                <p>Talle</p>
+                <label>Talle</label>
                 <select name="size" id="size" class="seleccionar_color">
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
+                    <% for( let i = 0; i < sizes.length; i++ ) { %>                    
+                        <option value="<%= sizes[i].id %> ">
+                            <%= sizes[i].name %> 
+                        </option>
+                    <% } %>    
                 </select>
             </div>
-
-            <p><label>Precio</label></p>
-            <input type="text" name="price" id="price" size="12px">
-            
+            <div>
+                <label>Stock</label>
+                <input type="text" name="stock" id="stock">
+            </div>
+            <div>
+                <label>Precio</label>
+                <input type="text" name="price" id="price">
+            </div>
             <div class="img-create-form">
                 <label for="image">Imagen</label>
                 <input type="file" name="image">
             </div>
-
             <div class="register-but">
-            <input type="submit" class= "submit" value="Agregar al listado">
-            <input type="reset" class= "reset" value="Cancelar">
+                <input type="submit" class= "submit" value="Agregar al listado">
+                <input type="reset" class= "reset" value="Cancelar">
             </div>
         </form>
     </div>
