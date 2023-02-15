@@ -48,9 +48,9 @@
     }
     
     .registro form input[type="submit"]{
-     color: #eae8e5;
-     font-weight: 500;
-     background-color: #25363d;  
+    color: #eae8e5;
+    font-weight: 500;
+    background-color: #25363d;  
     }
     
     
@@ -58,11 +58,15 @@
         color: #eae8e5;
         font-weight: 500;
         background-color: #25363d;  
-       }
-       
-       .registro form input[type="submit"]:hover{
-           background-color: #64747c;
-       }
+    }
+    
+    .registro form input[type="submit"]:hover{
+        background-color: #64747c;
+    }
+
+    .product-errors {
+        color: red;
+    }
     
     /* Media Query para Tablet */
     
@@ -101,21 +105,20 @@
     
         
         
-          .registro form input[type="text"]{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            font-size: 10px;
-            font-style: italic;
-            height: 24px;
-            margin-bottom: 15px;
-       }
+        .registro form input[type="text"]{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        font-size: 10px;
+        font-style: italic;
+        height: 24px;
+        margin-bottom: 15px;
+    }
     
-       
         
-     }
+    }
     
-     .register-but{
+    .register-but{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -124,7 +127,6 @@
         font-size: 14px;
         position: relative;
         }
-     
         
     
         

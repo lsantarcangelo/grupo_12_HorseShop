@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+const validateProducts = require('../middleware/validateProducts')
 
 // Configuracion Multer
 const multer = require('multer');
@@ -22,7 +23,7 @@ router.get('/', productsController.list);
 
 //Crear un producto
 router.get('/create', productsController.create);
-router.post('/create', upload.single('image'), productsController.store);
+router.post('/create', upload.single('image'), validateProducts, productsController.store);
 
 // Detalle de un producto // 
 router.get('/detail/:id/', productsController.detail); 

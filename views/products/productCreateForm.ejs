@@ -7,74 +7,125 @@
 </head>
 
 <body>
-<!-- Inicio de Cabecera del Sitio -->
-<%- include('../partials/header') %>
-        <main>
-            <h2>ACCESO A ADMINISTRADOR</h2>
-            <h3>AGREGAR ARTICULOS</h3>
-            <!-- Formulario  -->
-    <div class="registro">
-        <form action="/products/create" method="POST" enctype="multipart/form-data" class="campo">
-            <div>
-                <label>Nombre del producto</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div>
-                <label>Descripción</label>
-                <input type="text" name="description" id="description">
-            </div>
-            <div>
-                <label>Categoría</label>
-                <select name="category" id="category">
-                    <% for( let i = 0; i < categories.length; i++ ) { %>
-                        <option value="<%= categories[i].id %>">
-                            <%= categories[i].name %> 
-                        </option>
+    <!-- Inicio de Cabecera del Sitio -->
+    <%- include('../partials/header') %>
+            <main>
+                <h2>ACCESO A ADMINISTRADOR</h2>
+                <h3>AGREGAR ARTICULOS</h3>
+                <div class="product-errors">
+                    <ul></ul>
+                </div>
+                <!-- Formulario  -->
+        <div class="registro">
+            <form action="/products/create" method="POST" enctype="multipart/form-data" class="productsForm">
+                <div>
+                    <label>Nombre del producto</label>
+                    <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="form-error-msg">
+                            <%= errors.name.msg %> 
+                        </div>
                     <% } %>
-                </select>
-            </div>
-            <div class="listacolor">
-                <label>Color</label>
-                <select name="color" id="color" class="seleccionar_color">
-                    <% for( let i = 0; i < colors.length; i++ ) { %>                    
-                        <option value="<%= colors[i].id %> ">
-                            <%= colors[i].name %> 
-                        </option>
-                    <% } %>    
-                </select>
-            </div>
-            <div class= "listatalle">
-                <label>Talle</label>
-                <select name="size" id="size" class="seleccionar_color">
-                    <% for( let i = 0; i < sizes.length; i++ ) { %>                    
-                        <option value="<%= sizes[i].id %> ">
-                            <%= sizes[i].name %> 
-                        </option>
-                    <% } %>    
-                </select>
-            </div>
-            <div>
-                <label>Stock</label>
-                <input type="text" name="stock" id="stock">
-            </div>
-            <div>
-                <label>Precio</label>
-                <input type="text" name="price" id="price">
-            </div>
-            <div class="img-create-form">
-                <label for="image">Imagen</label>
-                <input type="file" name="image">
-            </div>
-            <div class="register-but">
-                <input type="submit" class= "submit" value="Agregar al listado">
-                <input type="reset" class= "reset" value="Cancelar">
-            </div>
-        </form>
-    </div>
+                </div>
+                <div>
+                    <label>Descripción</label>
+                    <input type="text" name="description" id="description"
+                    value="<%= locals.oldData ? oldData.description : null %>"
+                    >
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="form-error-msg">
+                            <%= errors.description.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+                <div>
+                    <label>Categoría</label>
+                    <select name="category" id="category">
+                        <% if (locals.errors && errors.category) { %>
+                            <div class="form-error-msg">
+                                <%= errors.category.msg %> 
+                            </div>
+                        <% } else { %>
+                            <% for( let i = 0; i < categories.length; i++ ) { %>
+                                <option value="<%= categories[i].id %>"
+                                    <%= locals.oldData && (categories[i].id == oldData.category) ? 'selected' : null %>    
+                                >
+                                    <%= categories[i].name %> 
+                                </option>
+                            <% } %>
+                        <% } %> 
+                    </select>
+                </div>
+                <div class="listacolor">
+                    <label>Color</label>
+                    <select name="color" id="color" class="seleccionar_color">
+                        <% if (locals.errors && errors.colors) { %>
+                            <div class="form-error-msg">
+                                <%= errors.color.msg %> 
+                            </div>
+                        <% } else { %>
+                            <% for( let i = 0; i < colors.length; i++ ) { %>                    
+                                <option value="<%= colors[i].id %> "
+                                    <%= locals.oldData && (colors[i].id == oldData.color) ?
+                                    'selected' : null %>
+                                >
+                                    <%= colors[i].name %> 
+                                </option>
+                            <% } %>
+                        <% } %>    
+                    </select>
+                </div>
+                <div class= "listatalle">
+                    <label>Talle</label>
+                    <select name="size" id="size" class="seleccionar_color">
+                        <% if (locals.errors && errors.size) { %>
+                            <div class="form-error-msg">
+                                <%= errors.size.msg %> 
+                            </div>
+                        <% } else { %>
+                            <% for( let i = 0; i < sizes.length; i++ ) { %>                    
+                                <option value="<%= sizes[i].id %> "
+                                    <%= locals.oldData && (sizes[i].id == oldData.size) ?
+                                    'selected' : null %>
+                                >   
+                                    <%= sizes[i].name %> 
+                                </option>
+                            <% } %>    
+                        <% } %> 
+                    </select>
+                </div>
+                <div>
+                    <label>Stock</label>
+                    <input type="text" name="stock" id="stock"
+                    value="<%= locals.oldData ? oldData.stock : null %>"
+                    >
+                </div>
+                <div>
+                    <label>Precio</label>
+                    <input type="text" name="price" id="price"
+                    value="<%= locals.oldData ? oldData.price : null %>">
+                </div>
+                <div class="img-create-form">
+                    <label for="image">Imagen</label>
+                    <input type="file" name="image">
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="form-error-msg">
+                            <%= errors.image.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+                <div class="register-but">
+                    <input type="submit" class= "submit" value="Agregar al listado">
+                    <input type="reset" class= "reset" value="Cancelar">
+                </div>
+            </form>
+        </div>
 
-</main>
-<!-- Footer del Sitio -->
-<%- include('../partials/footer') %> 
-    
+    </main>
+    <!-- Footer del Sitio -->
+    <%- include('../partials/footer') %>
+    <!-- Footer del Sitio --> 
+    <script src="../../js/productValidations.js" type="text/javascript">
+    </script>    
 </body>
 </html>
