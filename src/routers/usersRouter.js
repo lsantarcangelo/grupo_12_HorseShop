@@ -18,7 +18,7 @@ const uploadFile = require('../middleware/multerMiddelware');
 //Formulario de registro de nuevo usuario
 router.get('/register', guestMiddleware, usersController.register);
 
-//Procesar el registro de nuevo usuario //AGREGAR validations como middleware luego de debuggearlo//
+//Procesar el registro de nuevo usuario //
 router.post('/register', uploadFile.single('image'), validations, usersController.processRegister);
 
 //Login de usuario
