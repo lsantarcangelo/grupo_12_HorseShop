@@ -35,18 +35,6 @@
                             <%= errors.lastName.msg %> 
                         </div>
                     <% } %>
-                    <p>CATEGORIA</p>
-                    <input 
-                    type="text" 
-                    name="category" 
-                    placeholder="Ej. Cliente"
-                    value="<%= locals.oldData ? oldData.category : null %>"
-                    >
-                    <% if (locals.errors && errors.category) { %>
-                        <div class="form-error-msg">
-                            <%= errors.category.msg %> 
-                        </div>
-                    <% } %>
                     <p>EMAIL</p>    
                     <input 
                     type="text" 
@@ -60,14 +48,14 @@
                         </div>
                     <% } %>
                     <p>CONTRASEÑA</p>    
-                    <input type="password" name="password" placeholder="Abcd1234" minlength="6" maxlength="6">
+                    <input type="password" name="password" placeholder="Abcd1234" maxlength="20" >
                     <% if (locals.errors && errors.password) { %>
                         <div class="form-error-msg">
                             <%= errors.password.msg %> 
                         </div>
                     <% } %>
                     <p>REPETIR CONTRASEÑA</p>  
-                    <input type="password" name="passConfirm" placeholder="Abcd1234"minlength="6" maxlength="6" >
+                    <input type="password" name="passConfirm" placeholder="Abcd1234" maxlength="20" >
                     <% if (locals.errors && errors.passConfirm) { %>
                         <div class="form-error-msg">
                             <%= errors.passConfirm.msg %> 

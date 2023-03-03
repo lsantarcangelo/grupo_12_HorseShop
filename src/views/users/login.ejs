@@ -24,7 +24,7 @@
                 </div>
             <% } %>
             <p>CONTRASEÑA</p>    
-            <input type="password" name="password" placeholder="Abcd1234" minlength="6" maxlength="6">
+            <input type="password" name="password" placeholder="Abcd1234"  maxlength="20">
             <% if (locals.errors && errors.password) { %>
                 <div class="form-error-msg">
                     <%= errors.password.msg %> 

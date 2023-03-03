@@ -6,10 +6,10 @@ const path = require('path');
 const usersController = require('../controllers/usersController');
 
 //middelware
-const validations = require('../middleware/validateRegisterMiddeware');
-const validateLogin = require('../middleware/validateLoginMiddelware');
+const validations = require('../middleware/validations/validateRegisterMiddeware');
+const validateLogin = require('../middleware/validations/validateLoginMiddelware');
 const guestMiddleware =require('../middleware/guestMiddelware')
-const authMiddleware= require('../middleware/authMiddleware')
+const authMiddleware= require('../middleware/auth/authMiddleware')
 
 
 // Configuracion Multer
