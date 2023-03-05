@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const validateProducts = require('../middleware/validations/validateProducts')
+const validateProducts = require('../middleware/validateProducts');
+const productsController = require('../controllers/productsController');
 
 // Configuracion Multer
 const multer = require('multer');
@@ -16,10 +17,15 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-const productsController = require('../controllers/productsController');
 
 //Listar productos
 router.get('/', productsController.list);
+
+//Listar productos por categoria
+router.get('/category/1/', productsController.man);
+router.get('/category/2/', productsController.woman);
+router.get('/category/3/', productsController.kids);
+router.get('/category/4/', productsController.accesories);
 
 //Crear un producto
 router.get('/create', productsController.create);
