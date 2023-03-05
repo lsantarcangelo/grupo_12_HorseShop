@@ -14,17 +14,17 @@
                 
             <div class="user-profile">
                 <div class="image-container">
-                    <img src="/images/users/<%= userProfile.image %> " alt="Imagen de Usuario" class="user-image">
+                    <img src="/images/users/<%= locals.userLogged.image %> " alt="Imagen de Usuario" class="image">
                 </div>
 
                 <div class="user-detail">
 
-                    <p> <%= userProfile.firstName %> </p>
+                    <p> <%= locals.userLogged.firstName %> </p>
 
-                    <p> <%= userProfile.lastName %>  </p>
+                    <p> <%= locals.userLogged.lastName %>  </p>
 
-                    <p> <%= userProfile.email %>  </p>
-            </div> 
+                    <p> <%= locals.userLogged.email %>  </p>
+            </div>
         </section>
  
     </main>

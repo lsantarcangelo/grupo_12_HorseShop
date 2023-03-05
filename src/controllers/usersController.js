@@ -113,10 +113,16 @@ const controller = {
 		},
 	
 	
-	profile: (req, res) => {
-		return res.render('../src/views/users/userProfile', {
-			userProfile: req.session.userLogged
-		});
+		profile: async (req, res) => {
+			try {
+				let logedUser = await User.findAll({
+					where: { id: req.session.userLogged.id },
+				});
+				res.render("users/userProfile", { logedUser});
+			} 
+		catch (error) {
+			res.send(error);
+		}
 	},
 
 	logout: (req, res) => {
