@@ -13,7 +13,7 @@ const controller = {
 			const resultValidation = validationResult(req);
 						
 				if (resultValidation.errors.length > 0) {
-					return res.render('../views/users/register', {
+					return res.render('../src/views/users/register', {
 					errors: resultValidation.mapped(),
 					oldData: req.body
 				});
@@ -33,8 +33,7 @@ const controller = {
 						oldData: req.body
 					});
 				}else {
-					
-			console.log('consolelog3')	
+
 														
 					await User.create({
 					firstname: req.body.firstName,
@@ -118,7 +117,7 @@ const controller = {
 				let logedUser = await User.findAll({
 					where: { id: req.session.userLogged.id },
 				});
-				res.render("users/userProfile", { logedUser});
+				res.render("../src/views/users/userProfile", { logedUser});
 			} 
 		catch (error) {
 			res.send(error);
