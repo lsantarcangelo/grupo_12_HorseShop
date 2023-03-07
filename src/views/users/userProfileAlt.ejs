@@ -1,0 +1,20 @@
+<!-- Head -->
+    <%- include('../partials/head')%>
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/userProfileAlt.css">
+        <title>User Profile</title>
+    </head>
+
+    <body>
+        <%- include('../partials/header')%>
+        <div class="profile">
+        <img class="user-avatar" src="/images/users/<%= logedUser.user_img %>">
+        <h2><%= logedUser.firstName %> <%= logedUser.lastName %></h2>
+        <br>
+        <label>Email: </label><%= logedUser.email %>
+        </div>
+        <%- include('../partials/footer')%>
+    </body>
+</html>

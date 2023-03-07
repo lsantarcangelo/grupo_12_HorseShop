@@ -24,7 +24,7 @@ const controller = {
 			}});
 
 			if (userInDB) {
-				return res.render('../views/users/register', {
+				return res.render('../src/views/users/register', {
 					errors: {
 						email: {
 							msg: 'Este correo electronico ya se encuentra registrado'
@@ -117,7 +117,7 @@ const controller = {
 				let logedUser = await User.findAll({
 					where: { id: req.session.userLogged.id },
 				});
-				res.render("../src/views/users/userProfile", { logedUser});
+				res.render("../src/views/users/userProfileAlt", { logedUser});
 			} 
 		catch (error) {
 			res.send(error);

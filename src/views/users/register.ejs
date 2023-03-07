@@ -6,15 +6,14 @@
 <%- include('../partials/header')%>
     <main>
         <!-- Formulario  -->
-        <div class="registro">
+        <div class="register">
             <form method="POST" action="/register" enctype="multipart/form-data">
-                <h2> CREAR CUENTA</h2>
+                <h2>Crear Cuenta</h2>
                 <div class="nombre-apellido">
-                    <p>NOMBRE</p>
+                    <p>Nombre</p>
                     <input 
                         type="text" 
                         name="firstName" 
-                        placeholder="Ej. Juan"
                         class="from-control"<%= locals.errors && errors.firstName ? 'is-invalid' : 'is-valid'  %> 
                         value="<%= locals.oldData ? oldData.firstName : null %>"
                     >
@@ -23,11 +22,10 @@
                             <%= errors.firstName.msg %> 
                         </div>
                     <% } %>
-                    <p>APELLIDO</p>
+                    <p>Apellido</p>
                     <input 
                     type="text" 
                     name="lastName" 
-                    placeholder="Ej. Peréz"
                     value="<%= locals.oldData ? oldData.lastName : null %>"
                     >
                     <% if (locals.errors && errors.lastName) { %>
@@ -35,11 +33,21 @@
                             <%= errors.lastName.msg %> 
                         </div>
                     <% } %>
-                    <p>EMAIL</p>    
+                    <p>Categoría</p>
+                    <input 
+                    type="text" 
+                    name="category" 
+                    value="<%= locals.oldData ? oldData.category : null %>"
+                    >
+                    <% if (locals.errors && errors.category) { %>
+                        <div class="form-error-msg">
+                            <%= errors.category.msg %> 
+                        </div>
+                    <% } %>
+                    <p>Email</p>    
                     <input 
                     type="text" 
                     name="email" 
-                    placeholder="Ej. juanperez@mail.com"
                     value="<%= locals.oldData ? oldData.email : null %>"
                     >
                     <% if (locals.errors && errors.email) { %>
@@ -47,21 +55,21 @@
                             <%= errors.email.msg %> 
                         </div>
                     <% } %>
-                    <p>CONTRASEÑA</p>    
-                    <input type="password" name="password" placeholder="Abcd1234" maxlength="20" >
+                    <p>Contraseña</p>    
+                    <input type="password" name="password">
                     <% if (locals.errors && errors.password) { %>
                         <div class="form-error-msg">
                             <%= errors.password.msg %> 
                         </div>
                     <% } %>
-                    <p>REPETIR CONTRASEÑA</p>  
-                    <input type="password" name="passConfirm" placeholder="Abcd1234" maxlength="20" >
+                    <p>Repetir Contraseña</p>  
+                    <input type="password" name="passConfirm">
                     <% if (locals.errors && errors.passConfirm) { %>
                         <div class="form-error-msg">
                             <%= errors.passConfirm.msg %> 
                         </div>
                     <% } %>
-                    <p>IMAGEN</p>
+                    <p>Imagen</p>
                     <input type="file"
                         name="image" 
                         class="from-control"<%= locals.errors && errors.image ? 'is-invalid' : null %>">
@@ -72,10 +80,7 @@
                     <% } %>
                 </div> 
                 <br> 
-                <div class="register-but">
-                    <input type="submit" class= "submit" value="ENVIAR"><br>
-                    <input type="reset" class= "reset" value="BORRAR">
-                </div>
+                <button type="submit">Registrarse</button>
             </form>
         </div>
     </main>

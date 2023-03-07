@@ -3,29 +3,28 @@
 <link rel="stylesheet" href="../../css/styles.css">
 <link rel="stylesheet" href="../../css/header.css">
 <link rel="stylesheet" href="../../css/footer.css">
+<link rel="stylesheet" href="../../../css/productList.css">
 </head>
 
 <body>
     <!-- Inicio de Cabecera del Sitio -->
     <%- include('../partials/header') %>
-
     <!-- Inicio del Main del Sitio -->
     <main>
-
         <!-- Seccion tipo tarjetas con Categorias de Productos -->
         <div class="container products-wrapper">
             <div class="row">
-                <div id="man">
+                <div class="category-box">
                     <div class="col-12">
                         <h2 class="products-title">HOMBRES</h2>
                     </div>
-                    <% products.forEach((product) => { %>
-                        <% if (product.category_id == 1) { %>
-                            <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="big-box">
+                        <% products.forEach((product) => { %>
+                            <% if (product.category_id == 1) { %>
                                 <section class="product-box">
                                     <a href="/products/detail/<%= product.id %> ">
                                     <figure class="product-box_image">
-                                        <img src="/images/<%= product.product_img %>" width=15% alt="imagen de producto">
+                                        <img src="/images/<%= product.product_img %>" alt="imagen de producto">
                                     </figure>
                                     <article class="product-box_data">
                                         <p><%= product.name %></p>
@@ -33,72 +32,77 @@
                                     </article>
                                     </a>
                                 </section>
-                            </div>
-                        <% } %>
-                    <% }) %>
+                            <% } %>
+                        <% }) %>
+                    </div>
                 </div>
 
-                <br>
-                <div class="col-12">
-                    <h2 class="products-title">MUJERES</h2>
+                <div class="category-box">
+                    <div class="col-12">
+                        <h2 class="products-title">MUJERES</h2>
+                    </div>
+                    <div class="big-box">
+                        <% products.forEach((product) => { %>
+                            <% if (product.category_id == 2) { %>
+                                    <section class="product-box">
+                                        <a href="/products/detail/<%= product.id %> ">
+                                        <figure class="product-box_image">
+                                            <img src="/images/<%= product.product_img %>" alt="imagen de producto">
+                                        </figure>
+                                        <article class="product-box_data">
+                                            <h2> <%= product.price %> </h2>
+                                            <p><%= product.name %></p>
+                                        </article>
+                                        </a>
+                                    </section>
+                            <% } %>
+                        <% }) %>
+                    </div>
                 </div>
-                <% products.forEach((product) => { %>
-                    <% if (product.category_id == 2) { %>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <section class="product-box">
-                                <a href="/products/detail/<%= product.id %> ">
-                                <figure class="product-box_image">
-                                    <img src="/images/<%= product.product_img %>" width=15% alt="imagen de producto">
-                                </figure>
-                                <article class="product-box_data">
-                                    <h2> <%= product.price %> </h2>
-                                    <p><%= product.name %></p>
-                                </article>
-                                </a>
-                            </section>
-                        </div>
-                    <% } %>
-                <% }) %>
-                <div class="col-12">
-                    <h2 class="products-title">NIÑOS</h2>
+                <div class="category-box">
+                    <div class="col-12">
+                        <h2 class="products-title">NIÑOS</h2>
+                    </div>
+                    <div class="big-box">
+                        <% products.forEach((product) => { %>
+                            <% if (product.category_id == 3) { %>
+                                <section class="product-box">
+                                    <a href="/products/detail/<%= product.id %> ">
+                                    <figure class="product-box_image">
+                                        <img src="/images/<%= product.product_img %>" alt="imagen de producto">
+                                    </figure>
+                                    <article class="product-box_data">
+                                        <h2> <%= product.price %> </h2>
+                                        <p><%= product.name %></p>
+                                    </article>
+                                    </a>
+                                </section>
+                            <% } %>
+                        <% }) %>
+                    </div>
                 </div>
-                <% products.forEach((product) => { %>
-                    <% if (product.category_id == 3) { %>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <section class="product-box">
-                                <a href="/products/detail/<%= product.id %> ">
-                                <figure class="product-box_image">
-                                    <img src="/images/<%= product.product_img %>" width=15% alt="imagen de producto">
-                                </figure>
-                                <article class="product-box_data">
-                                    <h2> <%= product.price %> </h2>
-                                    <p><%= product.name %></p>
-                                </article>
-                                </a>
-                            </section>
-                        </div>
-                    <% } %>
-                <% }) %>
-                <div class="col-12">
-                    <h2 class="products-title">ACCESORIOS</h2>
+                <div class="category-box">
+                    <div class="col-12">
+                        <h2 class="products-title">ACCESORIOS</h2>
+                    </div>
+                    <div class="big-box">
+                        <% products.forEach((product) => { %>
+                            <% if (product.category_id == 4) { %>
+                                <section class="product-box">
+                                    <a href="/products/detail/<%= product.id %> ">
+                                    <figure class="product-box_image">
+                                        <img src="/images/<%= product.product_img %>" alt="imagen de producto">
+                                    </figure>
+                                    <article class="product-box_data">
+                                        <h2> <%= product.price %> </h2>
+                                        <p><%= product.name %></p>
+                                    </article>
+                                    </a>
+                                </section>
+                            <% } %>
+                        <% }) %>
+                    </div>
                 </div>
-                <% products.forEach((product) => { %>
-                    <% if (product.category_id == 4) { %>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <section class="product-box">
-                                <a href="/products/detail/<%= product.id %> ">
-                                <figure class="product-box_image">
-                                    <img src="/images/<%= product.product_img %>" width=15% alt="imagen de producto">
-                                </figure>
-                                <article class="product-box_data">
-                                    <h2> <%= product.price %> </h2>
-                                    <p><%= product.name %></p>
-                                </article>
-                                </a>
-                            </section>
-                        </div>
-                    <% } %>
-                <% }) %>
             </div>
         </div>
     </main>

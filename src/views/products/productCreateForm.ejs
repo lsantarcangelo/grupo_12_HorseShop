@@ -4,20 +4,30 @@
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/productCreateForm.css">
+    <style>
+        .product-errors {
+            width: 800px;
+            margin: 0 auto;
+        }
+        .product-errors ul li{
+            color: red;
+            list-style-type: none;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Inicio de Cabecera del Sitio -->
     <%- include('../partials/header') %>
-            <main>
-                <h2>ACCESO A ADMINISTRADOR</h2>
-                <h3>AGREGAR ARTICULOS</h3>
-                <div class="product-errors">
-                    <ul></ul>
-                </div>
-                <!-- Formulario  -->
+    <main>
+        
+        <div class="product-errors">
+            <ul></ul>
+        </div>
+        <!-- Formulario  -->
         <div class="registro">
             <form action="/products/create" method="POST" enctype="multipart/form-data" class="productsForm">
+                <h2>Agregar Productos</h2>
                 <div>
                     <label>Nombre del producto</label>
                     <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
@@ -26,6 +36,7 @@
                             <%= errors.name.msg %> 
                         </div>
                     <% } %>
+                    <span id="name-error"></span>
                 </div>
                 <div>
                     <label>Descripción</label>
@@ -37,6 +48,7 @@
                             <%= errors.description.msg %> 
                         </div>
                     <% } %>
+                    <span id="description-error"></span>
                 </div>
                 <div>
                     <label>Categoría</label>
@@ -114,10 +126,8 @@
                         </div>
                     <% } %>
                 </div>
-                <div class="register-but">
-                    <input type="submit" class= "submit" value="Agregar al listado">
-                    <input type="reset" class= "reset" value="Cancelar">
-                </div>
+                <br>
+                <button type="submit">Agregar al Listado</button>
             </form>
         </div>
 
@@ -125,7 +135,6 @@
     <!-- Footer del Sitio -->
     <%- include('../partials/footer') %>
     <!-- Footer del Sitio --> 
-    <script src="../../js/productValidations.js" type="text/javascript">
-    </script>    
+    <script src="../../js/productValidations.js" type="text/javascript"></script>    
 </body>
 </html>
