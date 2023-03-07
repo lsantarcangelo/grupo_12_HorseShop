@@ -5,61 +5,42 @@ const User = db.Users;
 
 const apiUsersControlers={
     allUsers: (req, res) => {
-        User.findAll()
-        .then(users => {
-            return res.status(200).json({
-                total: users.length,
-                data: users,
-                satatus: 200
-            })
+        User.findAll({
+            attributes: ["id", "firstname",'lastname', "email"],
         })
-        
+        .then((users) => {
+            for (let i = 0; i < users.length; i++) {
+            users[i].setDataValue(
+                "detail",
+                `http://localhost:3030/api/users/profile/${users[i].id}`
+            );
+            }
+    
+            let response = {
+            count: users.length,
+            users: users,
+            status: 200,
+            };
+    
+            res.status(200).json(response);
+        })
+        .catch((error) => res.json(error));
     },
     
     profile: (req, res) => {
         User.findByPk(req.params.id)
-        .then(user => {
-            let respuesta ={
-                meta:{
-                    status: 200,
-                    url: 'api/users/profile/id'
-                },
-                data: [
-                    user.firstname,
-                    user.lastname,
-                    user.email, 
-                    user.user_img
-                ]
-            }
-            res.json(respuesta)
+        .then((user) => {
+            let response = {
+            id: user.id,
+            firstname: user.firstname,
+            lastname: user.lastname,
+            email: user.email,
+            user_img: `http://localhost:3030/images/avatars/${user.user_img}`,
+            };
+            res.status(200).json(response);
         })
-    },
-    // create: (req, res) => {
-    //     User.create({
-    //         firstname: req.body.firstName,
-	// 		lastname: req.body.lastName,
-	// 		email: req.body.email,
-	// 		password: req.body.password, 
-	// 		user_img: req.body.image, 
-	// 		created_at: req.body.created_at,
-	// 		updated_at: req.body.updated_at,
-    //     })
-    //     .then(confirm =>{
-    //         if(confirm){
-    //             response = {
-    //                 meta:{
-    //                     satatus: 200,
-    //                     total : confirm.length,
-    //                     url : '/api/user/create',
-    //                 },
-                    
-    //                 data:confirm
-    //             }
-    //         }
-    //         res.json(response)
-    //     })
-    //     .catch(err => res.send(err))
-    // }
+        .catch((error) => console.error(error));
+    },    
 }
 
 module.exports = apiUsersControlers;
