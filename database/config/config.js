@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "aries_2_db",
+    "database": "aries_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
