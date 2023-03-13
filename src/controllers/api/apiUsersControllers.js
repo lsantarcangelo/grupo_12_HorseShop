@@ -1,9 +1,9 @@
 const path = require('path');
-const db = require('../../database/models');
+const db = require('../../../database/models');
 const User = db.Users;
 
 
-const apiUsersControlers={
+const apiUsersControllers={
     allUsers: (req, res) => {
         User.findAll({
             attributes: ["id", "firstname",'lastname', "email"],
@@ -35,7 +35,7 @@ const apiUsersControlers={
             firstname: user.firstname,
             lastname: user.lastname,
             email: user.email,
-            user_img: `http://localhost:3030/images/avatars/${user.user_img}`,
+            user_img: `http://localhost:3000/images/users/${user.user_img}`,
             };
             res.status(200).json(response);
         })
@@ -43,4 +43,4 @@ const apiUsersControlers={
     },    
 }
 
-module.exports = apiUsersControlers;
+module.exports = apiUsersControllers;
