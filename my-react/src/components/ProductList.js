@@ -6,11 +6,11 @@ function ProductList() {
     const [product, setProduct] = useState([])
 	
 	useEffect(()=>{
-		let endPoint = `http://localhost:3030/api/products/list`
+		let endPoint = `http://localhost:3000/api/products/`
 		fetch(endPoint)
 		.then(res=>res.json())
 		.then((data) => {
-				setProduct(data.data);
+				setProduct(data.products);
 			})
 		.catch(err => console.log(err))
 	}, [])

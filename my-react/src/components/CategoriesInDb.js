@@ -5,7 +5,7 @@ function CategoriesInDb() {
   const [product, setProduct] = useState([])
 	
 	useEffect(()=>{
-		let endPoint = `http://localhost:3006/api/products/color`
+		let endPoint = `http://localhost:3000/api/products/`
 		fetch(endPoint)
 		.then(res=>res.json())
 		.then((data) => {
@@ -19,7 +19,7 @@ function CategoriesInDb() {
       <div className="card shadow mb-4">
         <div className="card-header py-3">
           <h5 className="m-0 font-weight-bold text-gray-800">
-            Product color
+            Product Category
           </h5>
         </div>
         <div className="card-body">

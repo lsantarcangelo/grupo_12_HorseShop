@@ -28,7 +28,7 @@ const productsApiController = {
             .then(function(product) {
                 res.json({
                     product: product,
-                    image_url: ''
+                    image_url: `http://localhost:3000/images/${product.product_img}`
                 });
             })
 	}

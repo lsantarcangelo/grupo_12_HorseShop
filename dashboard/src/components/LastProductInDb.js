@@ -7,7 +7,7 @@ function LastProductDb(){
     const [product, setProduct] = useState([])
 	
 	useEffect(()=>{
-		let endPoint = `http://localhost:3000/api/products/lastProduct`
+		let endPoint = `http://localhost:3000/api/products/`
 		fetch(endPoint)
 		.then(res=>res.json())
 		.then((data) => {
@@ -25,7 +25,7 @@ function LastProductDb(){
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src={`http://localhost:3000/images/${product.product_img}`} style={{width: 40 +'rem'}} alt=" product "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src={`http://localhost:3000/images/${product.product_img}`} style={{width: 15 +'rem'}} alt=" product "/>
                     </div>
                     <h2>{product.name}</h2>
                     <p>{product.description}</p>

@@ -5,7 +5,6 @@ import CategoriesInDb from './CategoriesInDb';
 import LastProductDb from './LastProductDb';
 import ProductList from './ProductList';
 import NotFound from './NotFound';
-import SearchProducts from './SearchProducts';
 import {Link, Route, Routes} from 'react-router-dom';
 
 function SideBar(){
@@ -17,7 +16,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-25" src={image} alt="Vamos Las Bandas"/>
+                        <img className="w-25" src={image} alt=""/>
                     </div>
                 </a>
 
@@ -28,7 +27,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - VLB</span></Link>
+                        <span>Dashboard</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -80,9 +79,6 @@ function SideBar(){
                 </Route>
                 <Route path="/ProductList">
                     <ProductList />
-                </Route>
-                <Route path="/SearchProducts">
-                    <SearchProducts />
                 </Route>
                 <Route component={NotFound} />
             </Routes>
